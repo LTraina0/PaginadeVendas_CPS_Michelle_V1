@@ -1,0 +1,3814 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo de Contrato de Prestação de Serviços Inteligente | Michelle Coelho</title>
+  <meta name="description"
+    content="Contrate PJ ou MEI com mais segurança, sem improviso e protegendo a empresa de problemas na Justiça do Trabalho.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0a08;
+      --bg-elevated: #141210;
+      --surface: rgba(255, 253, 250, 0.03);
+      --border: rgba(212, 175, 55, 0.1);
+      --border-strong: rgba(212, 175, 55, 0.22);
+      --text-primary: #faf9f7;
+      --text-secondary: #b8b4ad;
+      --text-muted: #7a756d;
+      --gold: #c9a43a;
+      --gold-light: #dbb84a;
+      --cream: #f5f3ef;
+      --cream-dark: #e8e5df;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Prevenir overflow em mobile */
+    img,
+    video,
+    iframe,
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 0.875rem;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      .grid,
+      .cards-grid,
+      .grid-3 {
+        grid-template-columns: 1fr !important;
+      }
+
+      .section {
+        padding: 2.5rem 0;
+      }
+
+      .section-header {
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        font-size: clamp(1.5rem, 7vw, 1.875rem);
+        line-height: 1.25;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      h2 {
+        font-size: clamp(1.125rem, 5.5vw, 1.375rem);
+        line-height: 1.3;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      .overline {
+        font-size: 0.625rem;
+        padding: 6px 12px;
+        letter-spacing: 0.08em;
+      }
+
+      .card {
+        padding: 1.125rem;
+        border-radius: var(--radius-sm);
+      }
+
+      /* Hero styles movidos para o bloco principal da Hero */
+
+      .btn {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.6875rem;
+        letter-spacing: 0.03em;
+        white-space: normal;
+        min-height: 44px;
+        line-height: 1.4;
+      }
+
+      .icon-card {
+        padding: 1.125rem;
+        gap: 0.75rem;
+      }
+
+      .icon-card-header {
+        gap: 0.625rem;
+      }
+
+      .icon-card-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .icon-card-icon svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .feature-row {
+        padding: 1.125rem;
+        gap: 1rem;
+      }
+
+      .feature-row-icon {
+        width: 48px;
+        height: 48px;
+      }
+
+      .feature-row-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .item-number {
+        width: 40px;
+        height: 40px;
+        font-size: 0.75rem;
+      }
+
+      .bento-item {
+        padding: 1.25rem;
+      }
+
+      .bento-item-icon {
+        width: 44px;
+        height: 44px;
+      }
+
+      .bento-item-icon svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .testimonial {
+        min-height: 120px;
+        padding: 1.25rem;
+      }
+
+      .quote {
+        padding: 1rem;
+      }
+
+      .highlight {
+        padding: 1rem 1.125rem;
+      }
+
+      .price-section {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .price-current {
+        font-size: clamp(2.25rem, 10vw, 2.75rem);
+      }
+
+      .price-installments {
+        font-size: 0.875rem;
+      }
+
+      .guarantee {
+        padding: 1.125rem;
+        gap: 1rem;
+      }
+
+      .guarantee-seal {
+        width: 80px;
+        height: 80px;
+      }
+
+      .guarantee h3 {
+        font-size: 0.9375rem;
+      }
+
+      .guarantee p {
+        font-size: 0.8125rem;
+      }
+
+      .faq-item summary {
+        padding: 1rem;
+        font-size: 0.875rem;
+      }
+
+      .faq-icon {
+        width: 44px;
+        height: 44px;
+      }
+
+      .faq-content {
+        padding: 0 1rem 1rem;
+        font-size: 0.8125rem;
+      }
+
+      .offer-item {
+        padding: 0.75rem 1rem;
+        gap: 0.75rem;
+      }
+
+      .offer-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.6875rem;
+      }
+
+      .offer-text {
+        font-size: 0.8125rem;
+        line-height: 1.4;
+      }
+
+      .bonus-pill {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+      }
+
+      footer {
+        padding: 1.75rem 0;
+        font-size: 0.75rem;
+      }
+
+      .footer-logo img {
+        max-width: 120px;
+      }
+
+      .especialista-img {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
+
+
+      .whatsapp-float svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .sticky-cta {
+        padding: 0.5rem;
+      }
+
+      .sticky-cta .btn {
+        padding: 0.625rem 1rem;
+        font-size: 0.6875rem;
+        white-space: normal;
+        min-height: 44px;
+        line-height: 1.4;
+      }
+
+      body {
+        padding-bottom: 64px;
+      }
+
+      p {
+        font-size: 0.9375rem;
+        line-height: 1.55;
+      }
+
+      .section-header p {
+        font-size: 0.9375rem;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: "Google Sans", -apple-system, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text-secondary);
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+    }
+
+    h2 {
+      font-size: clamp(1.375rem, 3vw, 1.875rem);
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.0625rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--gold-light);
+    }
+
+
+    /* Section base */
+    .section {
+      padding: clamp(4rem, 10vh, 6rem) 0;
+      position: relative;
+    }
+
+    .section-cream {
+      background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+      color: #1a1816;
+    }
+
+    .section-cream h1,
+    .section-cream h2,
+    .section-cream h3 {
+      color: #0c0a08;
+    }
+
+    .section-cream p {
+      color: #3d3a36;
+    }
+
+    /* Header */
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto clamp(2rem, 5vw, 3rem);
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .section-cream .section-header p {
+      color: #5a5650;
+    }
+
+    /* Overline */
+    .overline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      padding: 7px 14px;
+      border: 1px solid var(--border-strong);
+      border-radius: 100px;
+      background: rgba(212, 175, 55, 0.05);
+    }
+
+    .overline::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .section-cream .overline {
+      background: rgba(160, 128, 48, 0.08);
+      border-color: rgba(160, 128, 48, 0.2);
+      color: #7a6030;
+    }
+
+    .section-cream .overline::before {
+      background: #7a6030;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+      transition: all var(--transition-bounce);
+      z-index: 9999;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
+    }
+
+    .whatsapp-float::after {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid rgba(37, 211, 102, 0.3);
+      animation: wa-pulse 2s ease-out infinite;
+      opacity: 0;
+    }
+
+    @keyframes wa-pulse {
+      0% {
+        transform: scale(0.8);
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: scale(1.4);
+        opacity: 0;
+      }
+    }
+
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+      }
+
+      .whatsapp-float svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    /* Gold text */
+    .gold-text {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 1rem 2rem;
+      border-radius: 100px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.8125rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition);
+      background: linear-gradient(135deg, #e8d080 0%, var(--gold) 100%);
+      color: #141000;
+      box-shadow: 0 3px 12px rgba(212, 175, 55, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      white-space: normal;
+      position: relative;
+      overflow: hidden;
+      min-height: 48px;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transform: rotate(25deg) translateX(-100%);
+      transition: transform 0.6s ease;
+      z-index: 1;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(212, 175, 55, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+      color: #141000 !important;
+    }
+
+    .btn:hover::after {
+      transform: rotate(25deg) translateX(100%);
+    }
+
+    .btn-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.15), transparent);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-strong);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .section-cream .card {
+      background: rgba(255, 255, 255, 0.75);
+      border-color: rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(8px);
+    }
+
+    .section-cream .card:hover {
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .section-cream .card::before {
+      background: linear-gradient(90deg, transparent, rgba(160, 128, 48, 0.12), transparent);
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Lists */
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      font-size: 0.9375rem;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      width: 18px;
+      height: 18px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      font-size: 0.625rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    .section-cream .checklist li::before {
+      background: rgba(160, 128, 48, 0.1);
+      border-color: rgba(160, 128, 48, 0.2);
+      color: #7a6030;
+    }
+
+    /* Hero — layout cinematográfico com proporções controladas */
+    .hero {
+      position: relative;
+      min-height: min(100svh, 920px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+
+      background-color: #050302;
+      background-image: url("Imagens/imagem\ bg\ desktop.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+      padding: clamp(96px, 8vw, 132px) 0 clamp(72px, 7vw, 104px);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 28%;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(180deg, transparent 0%, #050302 92%);
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      width: min(100% - 48px, 1180px);
+      margin-inline: auto;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 540px) minmax(0, 1fr);
+      align-items: center;
+      column-gap: clamp(72px, 8vw, 150px);
+      min-height: auto;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 540px;
+      text-align: left;
+    }
+
+    .hero-content .overline {
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      max-width: 540px;
+      margin: 0 0 28px;
+      font-size: clamp(3rem, 3.65vw, 4.2rem);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      text-align: left;
+    }
+
+    .hero .lead {
+      max-width: 500px;
+      margin: 0;
+      font-size: clamp(1rem, 1.05vw, 1.1rem);
+      line-height: 1.62;
+      color: rgba(250, 246, 241, 0.86);
+      text-align: left;
+    }
+
+    .hero-actions {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 36px;
+    }
+
+    .hero-actions .btn {
+      width: 100%;
+      min-height: 60px;
+      padding-inline: clamp(28px, 3vw, 40px);
+      text-align: center;
+      white-space: normal;
+      font-size: 0.82rem;
+      line-height: 1.25;
+    }
+
+    .hero-trust {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      font-size: 0.74rem;
+      color: rgba(250, 246, 241, 0.58);
+    }
+
+    /* Ocultar elementos visuais antigos se existirem */
+    .hero-visual,
+    .hero-photo-wrap,
+    .hero-photo {
+      display: none !important;
+    }
+
+    /* Desktop grande */
+    @media (min-width: 1600px) {
+      .hero {
+        background-image: url("Imagens/imagem\ bg\ desktop.png");
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .hero .container {
+        width: min(100% - 96px, 1320px);
+      }
+
+      .hero-inner {
+        grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+        column-gap: clamp(96px, 10vw, 180px);
+      }
+
+      .hero h1 {
+        max-width: 560px;
+        font-size: clamp(3.2rem, 3.4vw, 4.6rem);
+      }
+
+      .hero .lead {
+        max-width: 520px;
+      }
+    }
+
+    /* Ultrawide */
+    @media (min-width: 2200px) {
+      .hero {
+        background-image: url("Imagens/imaggem_3440x1440px.png");
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .hero .container {
+        width: min(100% - 140px, 1440px);
+      }
+
+      .hero h1 {
+        font-size: clamp(3.4rem, 3vw, 4.8rem);
+      }
+    }
+
+    /* Notebook / desktop menor */
+    @media (min-width: 1025px) and (max-width: 1399px) {
+      .hero {
+        background-image: url("Imagens/imagem\ bg\ desktop.png");
+        background-size: cover;
+        background-position: center center;
+        min-height: 820px;
+        padding-top: 104px;
+        padding-bottom: 80px;
+      }
+
+      .hero .container {
+        width: min(100% - 48px, 1120px);
+      }
+
+      .hero-inner {
+        grid-template-columns: minmax(0, 500px) minmax(0, 1fr);
+        column-gap: clamp(56px, 6vw, 96px);
+      }
+
+      .hero-content {
+        max-width: 500px;
+      }
+
+      .hero h1 {
+        max-width: 500px;
+        font-size: clamp(2.65rem, 3.7vw, 3.5rem);
+        line-height: 1.07;
+      }
+
+      .hero .lead {
+        max-width: 470px;
+        font-size: 0.98rem;
+      }
+
+      .hero-actions {
+        max-width: 470px;
+      }
+    }
+
+    /* Tablet horizontal */
+    @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+      .hero {
+        background-image: url("Imagens/imagem\ bg\ tablet\ horizontal.png");
+        background-size: cover;
+        background-position: center center;
+        min-height: 744px;
+        padding-top: 80px;
+        padding-bottom: 64px;
+      }
+
+      .hero .container {
+        width: min(100% - 40px, 960px);
+      }
+
+      .hero-inner {
+        grid-template-columns: minmax(0, 430px) minmax(0, 1fr);
+        column-gap: 48px;
+      }
+
+      .hero-content {
+        max-width: 430px;
+      }
+
+      .hero h1 {
+        max-width: 430px;
+        font-size: clamp(2.1rem, 4vw, 2.8rem);
+        line-height: 1.08;
+      }
+
+      .hero .lead {
+        max-width: 400px;
+        font-size: 0.92rem;
+        line-height: 1.5;
+      }
+
+      .hero-actions {
+        max-width: 400px;
+      }
+
+      .hero-actions .btn {
+        min-height: 56px;
+        font-size: 0.74rem;
+      }
+    }
+
+    /* Tablet vertical */
+    @media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+      .hero {
+        background-image: url("Imagens/imagem\ bg\ tablet\ vertical.png");
+        background-size: cover;
+        background-position: center top;
+        align-items: flex-start;
+        min-height: 100svh;
+        padding-top: 72px;
+        padding-bottom: 64px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        max-width: 560px;
+      }
+
+      .hero h1 {
+        max-width: 560px;
+        font-size: clamp(2.3rem, 6vw, 3.6rem);
+        line-height: 1.08;
+      }
+
+      .hero .lead {
+        max-width: 44ch;
+      }
+
+      .hero-actions {
+        max-width: 460px;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero {
+        background-image: url("Imagens/Imagem\ bg\ mobile.png");
+        background-size: cover;
+        background-position: center top;
+        align-items: flex-start;
+        min-height: 100svh;
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
+
+      .hero .container {
+        width: min(100% - 32px, 100%);
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero h1 {
+        max-width: 11ch;
+        font-size: clamp(2rem, 9vw, 2.75rem);
+        line-height: 1.07;
+      }
+
+      .hero .lead {
+        max-width: 34ch;
+        font-size: 0.94rem;
+        line-height: 1.5;
+      }
+
+      .hero-actions {
+        max-width: 100%;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        min-height: 56px;
+        padding-inline: 22px;
+        font-size: 0.72rem;
+      }
+
+      .hero-trust {
+        gap: 8px 12px;
+        font-size: 0.7rem;
+      }
+    }
+
+    /* Mobile pequeno */
+    @media (max-width: 420px) {
+      .hero {
+        padding-top: 40px;
+      }
+
+      .hero h1 {
+        max-width: 11ch;
+        font-size: clamp(1.85rem, 9vw, 2.35rem);
+      }
+
+      .hero .lead {
+        max-width: 31ch;
+      }
+    }
+
+    /* Offer Section Premium */
+    .offer-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-width: 520px;
+      margin: 0 auto 1.25rem;
+    }
+
+    .offer-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.875rem 1.25rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--gold) 0%, var(--gold-light) 100%);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .offer-item:hover {
+      border-color: var(--border-strong);
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .offer-item:hover::before {
+      opacity: 1;
+    }
+
+    .offer-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .offer-text {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .bonus-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 1.25rem;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--border-strong);
+      border-radius: 100px;
+      font-size: 0.8125rem;
+      color: var(--gold-light);
+      margin: 0 auto 1.5rem;
+      width: fit-content;
+      max-width: 520px;
+    }
+
+    .bonus-pill::before {
+      content: "+";
+      width: 18px;
+      height: 18px;
+      background: rgba(212, 175, 55, 0.15);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 0.625rem;
+      font-weight: 700;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* Price section */
+    .price-section {
+      background: linear-gradient(145deg, rgba(20, 18, 16, 0.98) 0%, rgba(12, 10, 8, 0.99) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: var(--radius);
+      padding: clamp(2.25rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.5rem);
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(212, 175, 55, 0.1), 0 0 80px rgba(212, 175, 55, 0.03);
+    }
+
+    .price-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+    }
+
+    .price-section::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      padding: 6px 14px;
+      border: 1px solid var(--border-strong);
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      background: rgba(212, 175, 55, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    .price-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+      animation: badge-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes badge-pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.6;
+        transform: scale(0.85);
+      }
+    }
+
+    .price-old {
+      font-size: 1rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .price-current {
+      font-size: clamp(3rem, 8vw, 4.5rem);
+      font-weight: 600;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 50px rgba(212, 175, 55, 0.2), 0 0 100px rgba(212, 175, 55, 0.05);
+      position: relative;
+      z-index: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .savings-tag {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: #4ade80;
+      background: rgba(74, 222, 128, 0.08);
+      border: 1px solid rgba(74, 222, 128, 0.15);
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .price-separator {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 1.25rem auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .guarantee-inline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .guarantee-inline svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .price-installments {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .price-installments strong {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .price-features {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 1;
+    }
+
+    .price-features span {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    /* Guarantee */
+    .guarantee {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: clamp(1.25rem, 3vw, 1.75rem);
+      background: rgba(212, 175, 55, 0.05);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .guarantee-icon {
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(212, 175, 55, 0.1);
+      border: 2px solid rgba(212, 175, 55, 0.2);
+      border-radius: 50%;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    .guarantee h3 {
+      margin-bottom: 0.375rem;
+      font-size: 1.0625rem;
+    }
+
+    .guarantee p {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* FAQ */
+    .faq-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.625rem;
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: var(--border-strong);
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.125rem 1.25rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      font-size: 0.9375rem;
+      user-select: none;
+    }
+
+    .faq-item summary:hover {
+      color: var(--gold);
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      width: 18px;
+      height: 18px;
+      position: relative;
+      flex-shrink: 0;
+      transition: transform var(--transition-bounce);
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+      content: "";
+      position: absolute;
+      background: currentColor;
+      border-radius: 1px;
+      top: 50%;
+      left: 50%;
+      transition: background var(--transition);
+    }
+
+    .faq-icon::before {
+      width: 10px;
+      height: 2px;
+      transform: translate(-50%, -50%);
+    }
+
+    .faq-icon::after {
+      width: 2px;
+      height: 10px;
+      transform: translate(-50%, -50%);
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-item[open] summary {
+      color: var(--gold);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-content {
+      padding: 0 1.25rem 1.125rem;
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 350ms ease, opacity 250ms ease, padding 350ms ease;
+    }
+
+    .faq-item[open] .faq-content {
+      max-height: 500px;
+      opacity: 1;
+      padding: 0 1.25rem 1.125rem;
+    }
+
+    .section-cream .faq-item {
+      background: rgba(0, 0, 0, 0.025);
+      border-color: rgba(0, 0, 0, 0.06);
+    }
+
+    .section-cream .faq-item:hover {
+      background: rgba(0, 0, 0, 0.04);
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .section-cream .faq-item summary {
+      color: #1a1816;
+    }
+
+    .section-cream .faq-item summary:hover {
+      color: #7a6030;
+    }
+
+    .section-cream .faq-icon::before,
+    .section-cream .faq-icon::after {
+      background: #5a5650;
+    }
+
+    .section-cream .faq-item[open] summary {
+      color: #7a6030;
+      border-bottom-color: rgba(0, 0, 0, 0.06);
+    }
+
+    .section-cream .faq-content {
+      color: #3d3a36;
+    }
+
+    /* Item cards */
+    .item-card {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .item-number {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      border-radius: var(--radius-sm);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    .section-cream .item-number {
+      background: rgba(160, 128, 48, 0.1);
+      border-color: rgba(160, 128, 48, 0.2);
+      color: #7a6030;
+    }
+
+    .item-content h3 {
+      margin-bottom: 0.375rem;
+    }
+
+    .item-content p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    /* Conteúdo — cards com miniatura */
+    #conteudo .grid.grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    #conteudo .item-card.item-card-media {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 24px;
+      border-radius: var(--radius);
+    }
+
+    #conteudo .item-media-wrap {
+      flex-shrink: 0;
+      width: 100px;
+    }
+
+    #conteudo .item-media {
+      position: relative;
+      height: 120px;
+      aspect-ratio: 3 / 4;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0.04) 100%);
+      border: 1px solid var(--border);
+    }
+
+    #conteudo .item-media-placeholder::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+    }
+
+    #conteudo .item-media-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #conteudo .item-media-badge {
+      position: absolute;
+      left: 8px;
+      bottom: 8px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #141000;
+      background: linear-gradient(135deg, #e8d080 0%, var(--gold) 100%);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    #conteudo .item-card-media .item-content h3 {
+      margin-bottom: 8px;
+    }
+
+    #conteudo .item-card-media .item-content p {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 968px) {
+      #conteudo .grid.grid-2 {
+        grid-template-columns: 1fr;
+      }
+      
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .bento-item-premium {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #conteudo .item-card.item-card-media {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 1.25rem;
+      }
+
+      #conteudo .item-media-wrap {
+        width: 86px;
+      }
+
+      #conteudo .item-media {
+        height: 104px;
+      }
+
+      #conteudo .item-content h3 {
+        font-size: 0.9375rem;
+      }
+
+      #conteudo .item-content p {
+        font-size: 0.8125rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #conteudo .item-card.item-card-media {
+        padding: 1rem;
+        gap: 12px;
+      }
+
+      #conteudo .item-media-wrap {
+        width: 72px;
+      }
+
+      #conteudo .item-media {
+        height: 88px;
+      }
+
+      #conteudo .item-media-badge {
+        padding: 3px 8px;
+        font-size: 0.6rem;
+      }
+
+      #conteudo .item-content h3 {
+        font-size: 0.875rem;
+        margin-bottom: 6px;
+      }
+
+      #conteudo .item-content p {
+        font-size: 0.75rem;
+        line-height: 1.5;
+      }
+    }
+
+    /* Icon cards */
+    .icon-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.75rem;
+    }
+
+    .icon-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+    }
+
+    .icon-card-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: var(--radius-sm);
+      color: var(--gold);
+    }
+
+    .icon-card-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .section-cream .icon-card-icon {
+      background: rgba(160,128,48,0.1);
+      border-color: rgba(160,128,48,0.2);
+      color: #7a6030;
+    }
+
+    .icon-card h3 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .icon-card p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin: 0;
+      color: var(--text-secondary);
+    }
+
+    .section-cream .icon-card p {
+      color: #3d3a36;
+    }
+
+    /* Feature row / highlight card */
+    .feature-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem 2rem;
+      background: rgba(212,175,55,0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-row::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--gold) 0%, var(--gold-light) 100%);
+    }
+
+    .feature-row-icon {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 50%;
+      color: var(--gold);
+    }
+
+    .feature-row-icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feature-row p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Bento grid for benefits */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .bento-item {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      text-align: center;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bento-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.15), transparent);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .bento-item:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-strong);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+    }
+
+    .bento-item:hover::before {
+      opacity: 1;
+    }
+
+    .bento-item-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 1rem;
+      display: grid;
+      place-items: center;
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: var(--radius-sm);
+      color: var(--gold);
+    }
+
+    .bento-item-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .bento-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.375rem;
+    }
+
+    .bento-item p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .bento-item-premium {
+      background: rgba(212,175,55,0.08);
+      border-color: var(--border-strong);
+      grid-column: span 1;
+    }
+
+    .bento-item-premium .bento-item-icon {
+      background: rgba(212,175,55,0.15);
+      border-color: rgba(212,175,55,0.25);
+    }
+
+    .bento-item-premium h3 {
+      color: var(--gold-light);
+    }
+
+    .bento-item-premium p {
+      color: var(--text-secondary);
+    }
+
+    /* Testimonial */
+    .testimonial {
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      min-height: 200px;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+
+    .testimonial:hover {
+      border-color: var(--border-strong);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .testimonial p {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Quote */
+    .quote {
+      margin-top: 1.25rem;
+      padding: 1.25rem;
+      border-left: 3px solid var(--gold);
+      background: rgba(212, 175, 55, 0.05);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    .quote p {
+      margin: 0;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+    }
+
+    .section-cream .quote {
+      background: rgba(160, 128, 48, 0.08);
+      border-left-color: #a08030;
+    }
+
+    .section-cream .quote p {
+      color: #1a1816;
+    }
+
+    /* Highlight */
+    .highlight {
+      background: rgba(212, 175, 55, 0.06);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+    }
+
+    .section-cream .highlight {
+      background: rgba(160, 128, 48, 0.08);
+      border-color: rgba(160, 128, 48, 0.18);
+    }
+
+    /* Final CTA */
+    .final-cta {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .final-cta h2 {
+      margin-bottom: 1.25rem;
+    }
+
+    .final-cta p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 0;
+      text-align: center;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    footer p {
+      margin-bottom: 0.375rem;
+    }
+
+    .footer-logo {
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-logo img {
+      max-width: 140px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Especialista imagem */
+    .especialista-img {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+    }
+
+    .especialista-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Selo garantia */
+    .guarantee-seal {
+      width: 120px;
+      height: 120px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .guarantee-seal img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .guarantee-seal {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    /* Sticky CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(12, 10, 8, 0.96);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      padding: 0.875rem;
+      z-index: 100;
+      transform: translateY(100%);
+      transition: transform var(--transition);
+    }
+
+    .sticky-cta.visible {
+      transform: translateY(0);
+    }
+
+    .sticky-cta.hidden {
+      transform: translateY(100%);
+    }
+
+    .sticky-cta .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .sticky-cta .btn {
+      width: 100%;
+      max-width: 380px;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: fixed;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(-150%);
+      background: var(--cream);
+      color: #0c0a08;
+      padding: 0.625rem 1rem;
+      border-radius: var(--radius-sm);
+      z-index: 9999;
+      font-weight: 500;
+      transition: transform var(--transition);
+    }
+
+    .skip-link:focus {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger children */
+    .grid .reveal:nth-child(1) {
+      transition-delay: 0ms;
+    }
+
+    .grid .reveal:nth-child(2) {
+      transition-delay: 60ms;
+    }
+
+    .grid .reveal:nth-child(3) {
+      transition-delay: 120ms;
+    }
+
+    .grid .reveal:nth-child(4) {
+      transition-delay: 180ms;
+    }
+
+    .grid .reveal:nth-child(5) {
+      transition-delay: 240ms;
+    }
+
+    .grid .reveal:nth-child(6) {
+      transition-delay: 300ms;
+    }
+
+    .grid .reveal:nth-child(7) {
+      transition-delay: 360ms;
+    }
+
+    /* Subtle section dividers */
+    .section::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      opacity: 0.5;
+    }
+
+    .section-cream::after,
+    .section:last-of-type::after {
+      display: none;
+    }
+
+    /* Responsive - Tablet */
+    @media (max-width: 768px) {
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      /* Hero styles movidos para o bloco principal da Hero */
+
+      .hero-trust {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .item-card {
+        flex-direction: column;
+        gap: 0.875rem;
+      }
+
+      .guarantee {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .price-features {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 0.875rem 1.25rem;
+      }
+
+      body {
+        padding-bottom: 72px;
+      }
+      
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .bento-item-premium {
+        grid-column: span 2;
+      }
+      
+      .icon-card {
+        padding: 1.25rem;
+      }
+      
+      .feature-row {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+        gap: 1rem;
+      }
+      
+      .icon-card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .card {
+        padding: 1.25rem;
+      }
+
+      .price-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .especialista-img {
+        max-width: 280px;
+        margin-bottom: 1.5rem;
+      }
+
+      .offer-item {
+        padding: 0.75rem 1rem;
+      }
+
+      .faq-item summary {
+        padding: 1rem 1.125rem;
+      }
+
+      .whatsapp-float {
+        bottom: 20px;
+      }
+    }
+
+    /* Responsive - Small tablet */
+    @media (max-width: 640px) {
+      .bento-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bento-item-premium {
+        grid-column: span 1;
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr !important;
+      }
+
+      .section {
+        padding: 2.75rem 0;
+      }
+
+      /* Hero styles movidos para o bloco principal da Hero */
+
+      .price-current {
+        font-size: clamp(2.75rem, 10vw, 3.5rem);
+      }
+
+      .guarantee-seal {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .sticky-cta {
+        display: none;
+      }
+    }
+
+    /* Utilities */
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-2 {
+      margin-top: 2rem;
+    }
+
+    .mb-0 {
+      margin-bottom: 0;
+    }
+  </style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://example.com/">
+<meta property="og:title" content="Modelo de Contrato de Prestação de Serviços Inteligente | Michelle Coelho">
+<meta property="og:description" content="Contrate PJ ou MEI com mais segurança, sem improviso, protegendo a empresa de problemas na Justiça do Trabalho.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:image" content="https://example.com/Imagens/michelle.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Modelo de Contrato de Prestação de Serviços Inteligente | Michelle Coelho">
+<meta name="twitter:description" content="Contrate PJ ou MEI com mais segurança, sem improviso, protegendo a empresa de problemas na Justiça do Trabalho.">
+<meta name="twitter:image" content="https://example.com/Imagens/michelle.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Modelo de Contrato de Prestação de Serviços Inteligente",
+  "description": "Modelo de contrato prático para contratação de PJ, MEI ou prestadores de serviços com segurança jurídica.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "BRL",
+    "price": "97",
+    "url": "https://pay.hotmart.com/Y97284855G?checkoutMode=10"
+  }
+}
+</script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Pular para conteúdo</a>
+
+  <main id="main">
+    <!-- 1. HERO -->
+    <section class="hero" aria-labelledby="hero-title" id="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content reveal active">
+            <p class="overline">Modelo de Contrato de Prestação de Serviços</p>
+
+            <h1 id="hero-title">
+              Contrate PJ ou MEI com mais segurança,
+              <span class="gold-text">sem improviso</span>
+              e protegendo a empresa de problemas na Justiça do Trabalho
+            </h1>
+
+            <p class="lead">
+              Tenha acesso imediato ao contrato certo, com cláusulas estratégicas,
+              documentos complementares e orientações práticas para contratar,
+              conduzir e encerrar a prestação de serviços com muito mais segurança.
+            </p>
+
+            <div class="hero-actions">
+              <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer">
+                <span class="btn-text">Quero acessar o modelo de contrato de prestação de serviços inteligente</span>
+              </a>
+            </div>
+
+            <div class="hero-trust">
+              <span>Acesso imediato e vitalício</span>
+              <span>Atualizações incluídas</span>
+              <span>Garantia de 7 dias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PROBLEMA -->
+    <section class="section section-cream" id="problema">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">A Verdade</span>
+          <h2>A verdade é simples</h2>
+        </div>
+
+        <div class="reveal text-center" style="max-width: 680px; margin: 0 auto;">
+          <p style="font-size: 1.125rem; margin-bottom: 1.25rem;">
+            Muitas empresas não têm problema porque agiram de má-fé. Têm problema porque <strong
+              style="color: #0c0a08;">contrataram no improviso</strong>.
+          </p>
+          <p style="margin-bottom: 1.25rem;">
+            Contratam um PJ ou MEI achando que está tudo certo. Usam um contrato genérico da internet. Deixam o contador
+            "resolver". Copiam o que outra empresa faz. Ou só formalizam "por cima", para não deixar sem papel.
+          </p>
+          <p style="margin-bottom: 1.25rem;">No começo, parece que deu certo.</p>
+          <p style="margin-bottom: 1.25rem;">
+            Mas, na prática, a rotina vai sendo construída do jeito errado. A empresa começa a cobrar como se fosse
+            empregado. Define horário. Cria subordinação. Passa ordens da forma errada. Mistura autonomia com controle.
+            E quando percebe… o que estava "barato" vira risco.
+          </p>
+          <p style="margin-bottom: 1.75rem;">
+            O problema é que, quando isso explode, normalmente já é tarde.
+          </p>
+
+          <div class="card reveal" style="text-align: center;">
+            <p class="mb-0">
+              E aí a empresa pode ter que lidar com reconhecimento de vínculo empregatício, passivo trabalhista,
+              desgaste operacional, prejuízo financeiro e a sensação de que tudo poderia ter sido evitado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. DOR -->
+    <section class="section" id="dor">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">O Perigo</span>
+          <h2>O perigo não está só no contrato fraco</h2>
+          <p>Está também na forma errada de conduzir a relação.</p>
+        </div>
+
+        <div class="grid grid-2" style="max-width: 720px; margin: 0 auto;">
+          <div class="card reveal icon-card">
+            <div class="icon-card-header">
+              <div class="icon-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              </div>
+              <h3>Esse é o ponto que muitas empresas ignoram</h3>
+            </div>
+            <p class="mb-0">Não basta ter um contrato assinado. É preciso que a contratação faça sentido no papel e na
+              prática.</p>
+          </div>
+
+          <div class="card reveal icon-card">
+            <div class="icon-card-header">
+              <div class="icon-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <h3>Porque não adianta escrever uma coisa no documento…</h3>
+            </div>
+            <p class="mb-0">E viver outra na rotina.</p>
+          </div>
+
+          <div class="card reveal feature-row" style="grid-column: 1 / -1;">
+            <div class="feature-row-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <p class="mb-0">
+              É exatamente por isso que tantas empresas contratam PJ porque acham mais barato, acreditam que "todo mundo
+              faz assim", formalizam sem estratégia, crescem rápido sem organizar processos e <strong
+                style="color: var(--text-primary);">só vão buscar informação quando a dor já apareceu</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="reveal text-center mt-2">
+          <p style="font-size: 1.0625rem; max-width: 560px; margin: 0 auto;">
+            Se você quer contratar prestador de serviços com mais inteligência, mais clareza e menos improviso, a sua
+            empresa precisa de estrutura.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SOLUÇÃO -->
+    <section class="section" id="solucao">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">A Solução</span>
+          <h2>Foi por isso que eu criei o <span class="gold-text">Modelo de Contrato de Prestação de Serviços
+              Inteligente</span></h2>
+        </div>
+
+        <div class="grid grid-2" style="align-items: center; gap: 2.5rem;">
+          <div class="reveal">
+            <p style="font-size: 1.0625rem; margin-bottom: 1rem;">
+              Um material prático para empresários e profissionais que precisam contratar PJ, MEI ou prestadores de
+              serviços com mais segurança, sem depender de contrato genérico e sem ficar tomando decisões no escuro.
+            </p>
+            <p style="margin-bottom: 1rem;">Aqui, você não recebe apenas um arquivo solto.</p>
+            <p style="margin-bottom: 1.5rem;">
+              Você recebe uma estrutura pensada para te ajudar a formalizar a contratação com mais segurança, reduzir
+              improvisos jurídicos e operacionais, entender melhor como conduzir essa relação, fazer ajustes contratuais
+              quando necessário, encerrar a prestação de serviços com mais organização e diminuir o risco de erros que
+              podem custar caro no futuro.
+            </p>
+            <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Contratar Com Mais Segurança</span></a>
+          </div>
+
+          <div class="reveal">
+            <div class="card" style="aspect-ratio: 16/10; display: grid; place-items: center; margin-bottom: 1rem;">
+              <span style="color: var(--text-muted); font-size: 0.875rem;">Imagens/placeholder-mockup-cps.webp</span>
+            </div>
+            <div class="grid grid-2">
+              <div class="card" style="aspect-ratio: 4/3; display: grid; place-items: center;">
+                <span style="color: var(--text-muted); font-size: 0.75rem;">Documentos</span>
+              </div>
+              <div class="card" style="aspect-ratio: 4/3; display: grid; place-items: center;">
+                <span style="color: var(--text-muted); font-size: 0.75rem;">PJ/MEI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PARA QUEM -->
+    <section class="section section-cream" id="para-quem">
+      <style>
+        #para-quem .para-quem-hero {
+          text-align: center;
+          max-width: 720px;
+          margin: 0 auto 3.5rem;
+        }
+
+        #para-quem .para-quem-hero h2 {
+          font-size: clamp(1.75rem, 4vw, 2.5rem);
+          margin-bottom: 1rem;
+          line-height: 1.2;
+        }
+
+        #para-quem .para-quem-hero p {
+          font-size: 1.125rem;
+          color: #5a5650;
+          margin: 0;
+        }
+
+        #para-quem .para-quem-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+
+        #para-quem .para-quem-card {
+          position: relative;
+          background: rgba(255, 255, 255, 0.6);
+          border: 1px solid rgba(0, 0, 0, 0.06);
+          border-radius: var(--radius);
+          padding: 2rem 1.75rem;
+          transition: all var(--transition);
+          overflow: hidden;
+        }
+
+        #para-quem .para-quem-card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+          background-size: 200% 100%;
+          opacity: 0;
+          transition: opacity var(--transition);
+        }
+
+        #para-quem .para-quem-card::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(212, 175, 55, 0.04) 0%, transparent 60%);
+          opacity: 0;
+          transition: opacity var(--transition);
+          pointer-events: none;
+        }
+
+        #para-quem .para-quem-card:hover {
+          transform: translateY(-6px);
+          border-color: rgba(160, 128, 48, 0.2);
+          box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+          background: rgba(255, 255, 255, 0.85);
+        }
+
+        #para-quem .para-quem-card:hover::before {
+          opacity: 1;
+          animation: gold-shimmer 2s linear infinite;
+        }
+
+        #para-quem .para-quem-card:hover::after {
+          opacity: 1;
+        }
+
+        @keyframes gold-shimmer {
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+
+        #para-quem .para-quem-icon {
+          width: 52px;
+          height: 52px;
+          display: grid;
+          place-items: center;
+          background: rgba(160, 128, 48, 0.08);
+          border: 1px solid rgba(160, 128, 48, 0.15);
+          border-radius: var(--radius-sm);
+          color: #7a6030;
+          margin-bottom: 1.25rem;
+          transition: all var(--transition);
+        }
+
+        #para-quem .para-quem-card:hover .para-quem-icon {
+          background: rgba(160, 128, 48, 0.12);
+          border-color: rgba(160, 128, 48, 0.25);
+          transform: scale(1.05);
+        }
+
+        #para-quem .para-quem-icon svg {
+          width: 24px;
+          height: 24px;
+          stroke: currentColor;
+          fill: none;
+          stroke-width: 2;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        #para-quem .para-quem-card h3 {
+          font-size: 1.05rem;
+          color: #0c0a08;
+          margin-bottom: 0.625rem;
+          line-height: 1.35;
+          font-weight: 600;
+        }
+
+        #para-quem .para-quem-card p {
+          font-size: 0.875rem;
+          color: #5a5650;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        #para-quem .para-quem-divider {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          margin: 3rem auto;
+          max-width: 400px;
+        }
+
+        #para-quem .para-quem-divider::before,
+        #para-quem .para-quem-divider::after {
+          content: "";
+          flex: 1;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(160, 128, 48, 0.25), transparent);
+        }
+
+        #para-quem .para-quem-divider span {
+          width: 8px;
+          height: 8px;
+          background: var(--gold);
+          border-radius: 50%;
+          box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+        }
+
+        #para-quem .para-quem-cta {
+          text-align: center;
+          max-width: 640px;
+          margin: 0 auto;
+          padding: 2rem 2.5rem;
+          background: linear-gradient(135deg, rgba(160, 128, 48, 0.08) 0%, rgba(160, 128, 48, 0.03) 100%);
+          border: 1px solid rgba(160, 128, 48, 0.15);
+          border-radius: var(--radius);
+          position: relative;
+          overflow: hidden;
+        }
+
+        #para-quem .para-quem-cta::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(160, 128, 48, 0.3), transparent);
+        }
+
+        #para-quem .para-quem-cta h3 {
+          font-size: 1.25rem;
+          color: #0c0a08;
+          margin-bottom: 0.75rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        #para-quem .para-quem-cta p {
+          font-size: 1rem;
+          color: #3d3a36;
+          margin-bottom: 1.5rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        @media (max-width: 968px) {
+          #para-quem .para-quem-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 768px) {
+          #para-quem .para-quem-hero h2 {
+            font-size: clamp(1.5rem, 5vw, 1.75rem);
+          }
+
+          #para-quem .para-quem-hero p {
+            font-size: 1rem;
+          }
+
+          #para-quem .para-quem-card {
+            padding: 1.25rem;
+          }
+
+          #para-quem .para-quem-icon {
+            width: 44px;
+            height: 44px;
+            margin-bottom: 1rem;
+          }
+
+          #para-quem .para-quem-icon svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          #para-quem .para-quem-card h3 {
+            font-size: 0.9375rem;
+          }
+
+          #para-quem .para-quem-card p {
+            font-size: 0.8125rem;
+          }
+
+          #para-quem .para-quem-divider {
+            margin: 2rem auto;
+          }
+
+          #para-quem .para-quem-cta {
+            padding: 1.25rem;
+          }
+
+          #para-quem .para-quem-cta h3 {
+            font-size: 1.0625rem;
+          }
+
+          #para-quem .para-quem-cta p {
+            font-size: 0.9375rem;
+          }
+        }
+
+        @media (max-width: 640px) {
+          #para-quem .para-quem-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+          }
+
+          #para-quem .para-quem-card {
+            padding: 1.125rem;
+          }
+
+          #para-quem .para-quem-cta {
+            padding: 1.125rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          #para-quem .para-quem-hero {
+            margin-bottom: 2rem;
+          }
+
+          #para-quem .para-quem-hero h2 {
+            font-size: 1.375rem;
+          }
+
+          #para-quem .para-quem-hero p {
+            font-size: 0.9375rem;
+          }
+
+          #para-quem .para-quem-grid {
+            gap: 0.75rem;
+          }
+
+          #para-quem .para-quem-card {
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+          }
+
+          #para-quem .para-quem-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 0.75rem;
+          }
+
+          #para-quem .para-quem-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+
+          #para-quem .para-quem-card h3 {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+          }
+
+          #para-quem .para-quem-card p {
+            font-size: 0.75rem;
+            line-height: 1.5;
+          }
+
+          #para-quem .para-quem-divider {
+            margin: 1.5rem auto;
+          }
+
+          #para-quem .para-quem-cta {
+            padding: 1rem;
+          }
+
+          #para-quem .para-quem-cta h3 {
+            font-size: 0.9375rem;
+          }
+
+          #para-quem .para-quem-cta p {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+          }
+        }
+      </style>
+
+      <div class="container">
+        <div class="para-quem-hero reveal">
+          <span class="overline">Público</span>
+          <h2>Esse material foi feito para quem leva contratação a sério</h2>
+          <p>Se você se identifica com algum desses perfis, esse produto é exatamente o que a sua empresa precisa agora.</p>
+        </div>
+
+        <div class="para-quem-grid">
+          <div class="para-quem-card reveal">
+            <div class="para-quem-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Contrata ou pretende contratar PJ, MEI ou prestador de serviços</h3>
+            <p>Você precisa formalizar essa relação com mais segurança desde o primeiro dia, sem depender de improvisos.</p>
+          </div>
+
+          <div class="para-quem-card reveal">
+            <div class="para-quem-icon">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3>Quer evitar erros trabalhistas por falta de clareza na contratação</h3>
+            <p>Sabe que um contrato mal feito hoje pode virar processo amanhã, e prefere prevenir do que remediar.</p>
+          </div>
+
+          <div class="para-quem-card reveal">
+            <div class="para-quem-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>Não quer depender de modelo genérico da internet</h3>
+            <p>Entende que contrato copiado do Google não protege empresa nenhuma. Precisa de algo estratégico e validado.</p>
+          </div>
+
+          <div class="para-quem-card reveal">
+            <div class="para-quem-icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3>Precisa de um contrato mais estratégico e profissional</h3>
+            <p>Sua empresa cresceu e a formalização precisa acompanhar esse nível. Chega de amadorismo jurídico.</p>
+          </div>
+
+          <div class="para-quem-card reveal">
+            <div class="para-quem-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+            </div>
+            <h3>Quer conduzir essa relação sem aumentar riscos para a empresa</h3>
+            <p>Sabe que contratar é só o começo. O que importa é como a relação é conduzida no dia a dia.</p>
+          </div>
+
+          <div class="para-quem-card reveal">
+            <div class="para-quem-icon">
+              <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3>Já teve problema trabalhista ou quer evitar passar por isso</h3>
+            <p>Aprendeu na prática que prevenção é muito mais barata que processo. Agora quer fazer diferente.</p>
+          </div>
+        </div>
+
+        <div class="para-quem-divider reveal"><span></span></div>
+
+        <div class="para-quem-cta reveal">
+          <h3><span style="color: #7a6030;">&#10003;</span> Se você se identificou com algum desses perfis</h3>
+          <p>Esse material foi pensado exatamente para a realidade da sua empresa. Não é teoria. É prática estruturada para quem quer contratar com mais inteligência e menos risco.</p>
+          <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Contratar Com Mais Segurança</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTEÚDO -->
+    <section class="section" id="conteudo">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">O Conteúdo</span>
+          <h2>O que você recebe</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card reveal item-card item-card-media">
+            <div class="item-media-wrap">
+              <div class="item-media">
+                <img src="Imagens/placeholder-item-01.webp" alt="Item 01" class="item-media-image" loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
+                <span class="item-media-badge">Item 01</span>
+              </div>
+            </div>
+            <div class="item-content">
+              <h3>Modelo de Contrato de Prestação de Serviços pronto e editável</h3>
+              <p class="mb-0">Com cláusulas essenciais e estratégicas para esse tipo de contratação, como obrigações das
+                partes, precificação, sigilo, inexistência de vínculo empregatício, descontos por danos causados pelo
+                MEI e outras cláusulas importantes para formalizar a relação com muito mais segurança.</p>
+            </div>
+          </div>
+
+          <div class="card reveal item-card item-card-media">
+            <div class="item-media-wrap">
+              <div class="item-media">
+                <img src="Imagens/placeholder-item-02.webp" alt="Item 02" class="item-media-image" loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
+                <span class="item-media-badge">Item 02</span>
+              </div>
+            </div>
+            <div class="item-content">
+              <h3>Modelo de Termo Aditivo</h3>
+              <p class="mb-0">Para alterar contratos que já estão ativos de forma mais segura e organizada, sem precisar
+                improvisar sempre que a relação mudar.</p>
+            </div>
+          </div>
+
+          <div class="card reveal item-card item-card-media">
+            <div class="item-media-wrap">
+              <div class="item-media">
+                <img src="Imagens/placeholder-item-03.webp" alt="Item 03" class="item-media-image" loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
+                <span class="item-media-badge">Item 03</span>
+              </div>
+            </div>
+            <div class="item-content">
+              <h3>Modelo de Distrato</h3>
+              <p class="mb-0">Para encerrar a prestação de serviços com mais clareza, registro e segurança documental.
+              </p>
+            </div>
+          </div>
+
+          <div class="card reveal item-card item-card-media">
+            <div class="item-media-wrap">
+              <div class="item-media">
+                <img src="Imagens/placeholder-item-04.webp" alt="Item 04" class="item-media-image" loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
+                <span class="item-media-badge">Item 04</span>
+              </div>
+            </div>
+            <div class="item-content">
+              <h3>Modelo de Termo Freelancer</h3>
+              <p class="mb-0">Para assinar com profissionais autônomos que não comparecem de forma contínua na empresa,
+                ajudando a formalizar esse tipo de relação com mais coerência.</p>
+            </div>
+          </div>
+
+          <div class="card reveal item-card item-card-media">
+            <div class="item-media-wrap">
+              <div class="item-media">
+                <img src="Imagens/placeholder-item-05.webp" alt="Item 05" class="item-media-image" loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
+                <span class="item-media-badge">Item 05</span>
+              </div>
+            </div>
+            <div class="item-content">
+              <h3>Recibo para pagamento do prestador freelancer</h3>
+              <p class="mb-0">Um documento complementar para organizar pagamentos e registrar melhor essa contratação.
+              </p>
+            </div>
+          </div>
+
+          <div class="card reveal item-card item-card-media">
+            <div class="item-media-wrap">
+              <div class="item-media">
+                <img src="Imagens/placeholder-item-06.webp" alt="Item 06" class="item-media-image" loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
+                <span class="item-media-badge">Item 06</span>
+              </div>
+            </div>
+            <div class="item-content">
+              <h3>Tutorial em vídeo</h3>
+              <p class="mb-0">Mostrando o passo a passo para preencher os modelos com mais segurança e usar o material
+                da forma correta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. BÔNUS -->
+    <section class="section" id="bonus" style="background: var(--bg-elevated);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Bônus Exclusivos</span>
+          <h2>Além dos modelos, você ainda recebe:</h2>
+        </div>
+
+        <div class="grid grid-2" style="max-width: 720px; margin: 0 auto;">
+          <div class="card reveal" style="border-left: 3px solid var(--gold);">
+            <h3>Masterclass</h3>
+            <p class="mb-0">Como contratar o prestador de serviços do zero sem gerar vínculo empregatício.</p>
+          </div>
+
+          <div class="card reveal" style="border-left: 3px solid var(--gold);">
+            <h3>Aula sobre Condução Segura</h3>
+            <p class="mb-0">Como conduzir a relação sem aumentar riscos para a empresa.</p>
+          </div>
+
+          <div class="card reveal" style="border-left: 3px solid var(--gold);">
+            <h3>Encontros Mensais no Zoom</h3>
+            <p class="mb-0">Com a Michelle para tirar dúvidas e ter direcionamento sobre situações práticas.</p>
+          </div>
+
+          <div class="card reveal" style="border-left: 3px solid var(--gold);">
+            <h3>Grupo no WhatsApp</h3>
+            <p class="mb-0">Para receber atualizações sobre a área trabalhista e se manter mais informado sobre temas
+              que impactam a empresa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. PRÁTICA -->
+    <section class="section section-cream" id="pratica">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Na Prática</span>
+          <h2>O que esse produto resolve?</h2>
+        </div>
+
+        <div class="reveal text-center" style="max-width: 640px; margin: 0 auto;">
+          <p style="font-size: 1.0625rem; margin-bottom: 1rem;">
+            Ele evita que você tenha que começar do zero toda vez que precisar contratar um prestador.
+          </p>
+          <p style="margin-bottom: 1rem;">
+            Evita que a sua empresa fique refém de contrato fraco, genérico ou mal adaptado.
+          </p>
+          <p style="margin-bottom: 1rem;">
+            Evita que decisões importantes sejam tomadas na pressa, no achismo ou apenas com base no "depois a gente
+            vê".
+          </p>
+          <p style="margin-bottom: 1.25rem;">
+            E te dá uma base mais sólida para contratar melhor, documentar melhor, ajustar melhor, encerrar melhor e
+            conduzir melhor a prestação de serviços.
+          </p>
+
+          <div class="highlight reveal">
+            <p class="mb-0" style="font-size: 1rem;">
+              Em outras palavras: você deixa de improvisar uma contratação sensível e passa a tratar isso com a <strong
+                style="color: #0c0a08;">seriedade que uma empresa madura precisa ter</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. BENEFÍCIOS -->
+    <section class="section" id="beneficios">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Transformação</span>
+          <h2>O que muda para a sua empresa depois disso?</h2>
+        </div>
+
+        <div class="bento-grid">
+          <div class="bento-item reveal">
+            <div class="bento-item-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </div>
+            <h3>Mais Clareza</h3>
+            <p class="mb-0">Na contratação</p>
+          </div>
+          <div class="bento-item reveal">
+            <div class="bento-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>Mais Segurança</h3>
+            <p class="mb-0">Na formalização</p>
+          </div>
+          <div class="bento-item reveal">
+            <div class="bento-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3>Mais Organização</h3>
+            <p class="mb-0">Na documentação</p>
+          </div>
+          <div class="bento-item reveal">
+            <div class="bento-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </div>
+            <h3>Mais Consciência</h3>
+            <p class="mb-0">Sobre o que pode ou não pode fazer na prática</p>
+          </div>
+          <div class="bento-item reveal">
+            <div class="bento-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3>Mais Preparo</h3>
+            <p class="mb-0">Para crescer sem transformar contratação em bomba-relógio</p>
+          </div>
+          <div class="bento-item reveal bento-item-premium">
+            <div class="bento-item-icon">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3>O Principal</h3>
+            <p class="mb-0">Você para de agir no automático em uma área que pode custar caro quando é tratada com amadorismo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. MANIFESTO -->
+    <section class="section section-cream" id="manifesto">
+      <div class="container">
+        <div class="reveal text-center" style="max-width: 680px; margin: 0 auto;">
+          <h2 style="margin-bottom: 1.25rem;">
+            Empresa séria não improvisa contratação.
+          </h2>
+          <p style="font-size: 1.0625rem; margin-bottom: 0.875rem;">
+            Ela entende que <strong style="color: #0c0a08;">prevenção é inteligência</strong>.
+          </p>
+          <p style="margin-bottom: 0.875rem;">
+            Ela sabe que <strong style="color: #0c0a08;">segurança jurídica não é excesso de cuidado</strong>. É base
+            para crescer com mais estabilidade.
+          </p>
+          <p style="margin-bottom: 0.875rem;">
+            Ela entende que a forma como contrata impacta diretamente seus riscos, sua organização, sua liderança, sua
+            operação e o futuro do negócio.
+          </p>
+          <p style="margin-bottom: 1.25rem;">
+            Se a sua empresa quer crescer de forma mais sólida, ela precisa parar de tratar contratação como detalhe.
+          </p>
+
+          <div class="highlight reveal" style="margin-bottom: 1.5rem;">
+            <p class="mb-0" style="font-size: 1.125rem; font-weight: 500; color: #0c0a08;">
+              Porque contratação não é detalhe. É fundamento.
+            </p>
+          </div>
+
+          <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn reveal" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Ter Mais Segurança na Contratação</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. PÚBLICO OFERTA -->
+    <section class="section" id="publico">
+      <style>
+        #publico .publico-hero-card {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          max-width: 800px;
+          margin: 0 auto 2.5rem;
+          padding: 2.5rem;
+          background: linear-gradient(135deg, rgba(212, 175, 55, 0.06) 0%, rgba(20, 18, 16, 0.6) 100%);
+          border: 1px solid rgba(212, 175, 55, 0.2);
+          border-radius: var(--radius);
+          position: relative;
+          overflow: hidden;
+          transition: all var(--transition);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #publico .publico-hero-card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+        }
+
+        #publico .publico-hero-card:hover {
+          transform: translateY(-4px);
+          border-color: rgba(212, 175, 55, 0.35);
+          box-shadow: 0 20px 48px rgba(0, 0, 0, 0.3);
+        }
+
+        #publico .publico-hero-icon {
+          width: 72px;
+          height: 72px;
+          flex-shrink: 0;
+          display: grid;
+          place-items: center;
+          background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.08) 100%);
+          border: 1px solid rgba(212, 175, 55, 0.25);
+          border-radius: 50%;
+          color: var(--gold-light);
+          position: relative;
+          z-index: 1;
+        }
+
+        #publico .publico-hero-icon svg {
+          width: 32px;
+          height: 32px;
+          stroke: currentColor;
+          fill: none;
+          stroke-width: 2;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        #publico .publico-hero-content {
+          position: relative;
+          z-index: 1;
+        }
+
+        #publico .publico-hero-tag {
+          display: inline-block;
+          padding: 4px 12px;
+          background: rgba(212, 175, 55, 0.1);
+          border: 1px solid rgba(212, 175, 55, 0.2);
+          color: var(--gold);
+          border-radius: 100px;
+          font-size: 0.6875rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          margin-bottom: 0.75rem;
+        }
+
+        #publico .publico-hero-content h3 {
+          font-size: 1.375rem;
+          margin-bottom: 0.625rem;
+          color: var(--text-primary);
+        }
+
+        #publico .publico-hero-content p {
+          margin: 0;
+          font-size: 1rem;
+          line-height: 1.6;
+          color: var(--text-secondary);
+        }
+
+        #publico .publico-divider {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          margin: 0 auto 2rem;
+          max-width: 480px;
+          color: var(--text-muted);
+          font-size: 0.9375rem;
+        }
+
+        #publico .publico-divider::before,
+        #publico .publico-divider::after {
+          content: "";
+          flex: 1;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+        }
+
+        #publico .publico-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 1.25rem;
+          max-width: 1000px;
+          margin: 0 auto 2rem;
+          overflow-x: hidden;
+        }
+
+        #publico .publico-card {
+          background: var(--bg-elevated);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-sm);
+          padding: 1.75rem 1.25rem;
+          text-align: center;
+          transition: all var(--transition);
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        #publico .publico-card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.15), transparent);
+          opacity: 0;
+          transition: opacity var(--transition);
+        }
+
+        #publico .publico-card:hover {
+          transform: translateY(-4px);
+          border-color: var(--border-strong);
+          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+        }
+
+        #publico .publico-card:hover::before {
+          opacity: 1;
+        }
+
+        #publico .publico-icon {
+          width: 56px;
+          height: 56px;
+          margin: 0 auto 1rem;
+          display: grid;
+          place-items: center;
+          background: rgba(212, 175, 55, 0.1);
+          border: 1px solid rgba(212, 175, 55, 0.2);
+          border-radius: 50%;
+          color: var(--gold);
+          transition: all var(--transition);
+        }
+
+        #publico .publico-card:hover .publico-icon {
+          background: rgba(212, 175, 55, 0.12);
+          border-color: rgba(212, 175, 55, 0.25);
+          transform: scale(1.05);
+        }
+
+        #publico .publico-icon svg {
+          width: 22px;
+          height: 22px;
+          stroke: currentColor;
+          fill: none;
+          stroke-width: 2;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        #publico .publico-card h4 {
+          font-size: 1.125rem;
+          color: var(--text-primary);
+          margin-bottom: 0.75rem;
+          font-weight: 600;
+        }
+
+        #publico .publico-card p {
+          font-size: 1rem;
+          color: var(--text-secondary);
+          line-height: 1.8;
+          margin: 0;
+        }
+
+        #publico .publico-footer {
+          max-width: 640px;
+          margin: 0 auto;
+          padding: 1.25rem 1.5rem;
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+        }
+
+        #publico .publico-footer::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+        }
+
+        #publico .publico-footer p {
+          margin: 0;
+          font-size: 0.9375rem;
+          color: var(--text-secondary);
+          position: relative;
+          z-index: 1;
+        }
+
+        @media (max-width: 968px) {
+          #publico .publico-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 768px) {
+          #publico .publico-hero-card {
+            padding: 1.75rem;
+            gap: 1.25rem;
+          }
+
+          #publico .publico-hero-icon {
+            width: 60px;
+            height: 60px;
+          }
+
+          #publico .publico-hero-icon svg {
+            width: 26px;
+            height: 26px;
+          }
+
+          #publico .publico-hero-content h3 {
+            font-size: 1.125rem;
+          }
+
+          #publico .publico-hero-content p {
+            font-size: 0.9375rem;
+          }
+
+          #publico .publico-divider {
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+          }
+
+          #publico .publico-card {
+            padding: 1.25rem;
+          }
+
+          #publico .publico-icon {
+            width: 44px;
+            height: 44px;
+          }
+
+          #publico .publico-icon svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          #publico .publico-card h4 {
+            font-size: 0.9375rem;
+          }
+
+          #publico .publico-card p {
+            font-size: 0.8125rem;
+          }
+        }
+
+        @media (max-width: 640px) {
+          #publico .publico-hero-card {
+            flex-direction: column;
+            text-align: center;
+            padding: 1.5rem;
+            gap: 1rem;
+          }
+
+          #publico .publico-grid {
+            grid-template-columns: 1fr;
+            gap: 0.875rem;
+          }
+
+          #publico .publico-card {
+            padding: 1.125rem;
+          }
+
+          #publico .publico-footer {
+            padding: 1rem;
+          }
+
+          #publico .publico-footer p {
+            font-size: 0.875rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          #publico .publico-hero-card {
+            padding: 1.25rem;
+          }
+
+          #publico .publico-hero-icon {
+            width: 52px;
+            height: 52px;
+          }
+
+          #publico .publico-hero-icon svg {
+            width: 22px;
+            height: 22px;
+          }
+
+          #publico .publico-hero-tag {
+            font-size: 0.625rem;
+            padding: 3px 10px;
+          }
+
+          #publico .publico-hero-content h3 {
+            font-size: 1rem;
+          }
+
+          #publico .publico-hero-content p {
+            font-size: 0.875rem;
+          }
+
+          #publico .publico-divider {
+            font-size: 0.8125rem;
+            gap: 0.75rem;
+          }
+
+          #publico .publico-grid {
+            gap: 0.75rem;
+          }
+
+          #publico .publico-card {
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+          }
+
+          #publico .publico-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 0.75rem;
+          }
+
+          #publico .publico-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+
+          #publico .publico-card h4 {
+            font-size: 0.875rem;
+            margin-bottom: 0.375rem;
+          }
+
+          #publico .publico-card p {
+            font-size: 0.75rem;
+            line-height: 1.5;
+          }
+
+          #publico .publico-footer {
+            padding: 0.875rem 1rem;
+          }
+
+          #publico .publico-footer p {
+            font-size: 0.8125rem;
+          }
+        }
+      </style>
+
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Para Quem</span>
+          <h2>Para quem esse material foi pensado?</h2>
+        </div>
+
+        <div class="publico-hero-card reveal">
+          <div class="publico-hero-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="publico-hero-content">
+            <span class="publico-hero-tag">Público Principal</span>
+            <h3>Empresários de pequenas e médias empresas</h3>
+            <p>Que contratam ou querem contratar prestadores de serviços (PJ, MEI ou freelancer) com mais segurança, sem
+              depender de improvisos jurídicos.</p>
+          </div>
+        </div>
+
+        <div class="publico-divider reveal"><span>E também funciona como apoio para</span></div>
+
+        <div class="publico-grid">
+          <div class="publico-card reveal">
+            <div class="publico-icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <h4>Gestores</h4>
+            <p>Que precisam conduzir contratações com mais clareza e segurança jurídica.</p>
+          </div>
+
+          <div class="publico-card reveal">
+            <div class="publico-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <line x1="20" y1="8" x2="20" y2="14"></line>
+                <line x1="23" y1="11" x2="17" y2="11"></line>
+              </svg>
+            </div>
+            <h4>Profissionais de RH</h4>
+            <p>Que cuidam das contratações e precisam de base sólida para formalizar relações.</p>
+          </div>
+
+          <div class="publico-card reveal">
+            <div class="publico-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h4>Profissionais de DP</h4>
+            <p>Que lidam com documentação e precisam de modelos confiáveis e validados.</p>
+          </div>
+
+          <div class="publico-card reveal">
+            <div class="publico-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+            </div>
+            <h4>Advogados</h4>
+            <p>Que desejam uma base prática e estruturada para orientar seus clientes.</p>
+          </div>
+        </div>
+
+        <div class="publico-footer reveal">
+          <p>Que desejam uma base prática e estruturada para esse tipo de contratação.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. SOBRE -->
+    <section class="section section-cream" id="sobre">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 2.5rem;">
+          <div class="reveal">
+            <div class="especialista-img">
+              <img src="Imagens/michelle.webp" alt="Michelle Coelho - Consultoria Empresarial Trabalhista" loading="lazy">
+            </div>
+          </div>
+
+          <div class="reveal">
+            <span class="overline">A Especialista</span>
+            <h2 style="margin-bottom: 1rem;">Sobre a Michelle</h2>
+
+            <p style="margin-bottom: 0.875rem;">
+              Michelle é especialista em <strong style="color: #0c0a08;">Consultoria Empresarial Trabalhista</strong> e,
+              desde <strong style="color: #0c0a08;">2015</strong>, ajuda empresas a estruturarem suas relações de
+              trabalho com mais clareza, segurança e inteligência. Ao longo da sua trajetória, já impactou <strong
+                style="color: #0c0a08;">mais de 21 mil empresas</strong> por meio dos seus produtos, orientando
+              empresários que desejam crescer com mais organização, proteção e visão estratégica.
+            </p>
+
+            <p style="margin-bottom: 0.875rem;">
+              Sua atuação parte de uma convicção forte: <strong style="color: #0c0a08;">empresas sólidas não são
+                construídas no improviso</strong>. São construídas com regras claras, liderança, estrutura e decisões
+              inteligentes. Por isso, Michelle defende que a área trabalhista não deve ser vista apenas como burocracia
+              ou medo, mas como uma ferramenta estratégica para proteger a empresa, organizar a operação e sustentar o
+              crescimento.
+            </p>
+
+            <p style="margin-bottom: 0.875rem;">
+              Ao acompanhar de perto a rotina de empresários, Michelle percebeu que muitas empresas não perdem apenas
+              dinheiro com processos. Perdem também autoridade, paz e força de operação por erros evitáveis,
+              contratações mal feitas, falta de clareza e uma gestão baseada no achismo. É por isso que seu trabalho vai
+              além de explicar leis: ele existe para ajudar empresas a amadurecerem a forma como contratam, lideram e
+              estruturam suas equipes.
+            </p>
+
+            <div class="quote reveal">
+              <p class="mb-0">"Empresa séria não improvisa contratação. Prevenção é inteligência e segurança jurídica e
+                visão estratégica caminham juntas."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. DEPOIMENTOS -->
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Resultados</span>
+          <h2>Quem aplica com clareza, sente a diferença na prática</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="testimonial reveal">
+            <p>INSERIR DEPOIMENTO / PRINT / CASO REAL</p>
+          </div>
+          <div class="testimonial reveal">
+            <p>INSERIR DEPOIMENTO / PRINT / CASO REAL</p>
+          </div>
+          <div class="testimonial reveal">
+            <p>INSERIR DEPOIMENTO / PRINT / CASO REAL</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. ANCORAGEM -->
+    <section class="section section-cream" id="ancoragem">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Valor</span>
+          <h2>Quanto custaria resolver isso do zero?</h2>
+        </div>
+
+        <div class="reveal text-center" style="max-width: 680px; margin: 0 auto;">
+          <p style="font-size: 1.0625rem; margin-bottom: 1rem;">
+            Se você fosse buscar isso sozinho, provavelmente teria que procurar um modelo confiável, adaptar cláusulas
+            sem saber se estão corretas, descobrir sozinho como alterar ou encerrar a relação, entender na marra como
+            conduzir a contratação na prática e ainda correr o risco de formalizar errado.
+          </p>
+
+          <div class="card reveal" style="margin: 1.25rem 0;">
+            <p class="mb-0">
+              Sem contar o <strong style="color: #0c0a08;">custo invisível da insegurança</strong>: tempo perdido,
+              retrabalho, dúvidas, decisões mal tomadas e exposição desnecessária.
+            </p>
+          </div>
+
+          <p style="font-size: 1.0625rem;">
+            Mas para facilitar o acesso a esse material, hoje você pode entrar por uma condição muito menor do que o
+            valor que esse tipo de erro pode custar para a empresa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. OFERTA -->
+    <section class="section" id="oferta"
+      style="background: radial-gradient(ellipse 70% 40% at 50% 30%, rgba(212,175,55,0.04) 0%, transparent 60%), var(--bg);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="overline">Oferta Especial</span>
+          <h2>Hoje, você recebe:</h2>
+        </div>
+
+        <div class="offer-list reveal">
+          <div class="offer-item">
+            <div class="offer-icon">01</div>
+            <span class="offer-text">Modelo de Contrato de Prestação de Serviços Inteligente</span>
+          </div>
+          <div class="offer-item">
+            <div class="offer-icon">02</div>
+            <span class="offer-text">Modelo de Termo Aditivo</span>
+          </div>
+          <div class="offer-item">
+            <div class="offer-icon">03</div>
+            <span class="offer-text">Modelo de Distrato</span>
+          </div>
+          <div class="offer-item">
+            <div class="offer-icon">04</div>
+            <span class="offer-text">Modelo de Termo Freelancer</span>
+          </div>
+          <div class="offer-item">
+            <div class="offer-icon">05</div>
+            <span class="offer-text">Recibo para pagamento do freelancer</span>
+          </div>
+          <div class="offer-item">
+            <div class="offer-icon">06</div>
+            <span class="offer-text">Tutorial em vídeo para preenchimento dos modelos</span>
+          </div>
+        </div>
+
+        <div class="bonus-pill reveal">Bônus: masterclass, aula sobre condução segura, encontros mensais e grupo no
+          WhatsApp</div>
+
+        <div class="price-section reveal">
+          <div class="price-badge">Oferta Especial</div>
+          <div class="price-old">De R$297,00</div>
+          <div class="price-current">R$97</div>
+          <div class="savings-tag">Economia de 67%</div>
+          <p class="price-installments">ou <strong>12x de R$10,03</strong></p>
+          <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Acessar Agora</span></a>
+          <div class="price-separator"></div>
+          <div class="price-features">
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M2 12h20" />
+              </svg>
+              Acesso imediato
+            </span>
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+              </svg>
+              Acesso vitalício
+            </span>
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              Garantia de 7 dias
+            </span>
+          </div>
+          <div class="guarantee-inline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Risco zero: 7 dias para testar com tranquilidade
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16. GARANTIA -->
+    <section class="section section-cream" id="garantia">
+      <div class="container">
+        <div class="guarantee reveal">
+          <div class="guarantee-seal">
+            <img src="Imagens/selo-garantia.webp" alt="Selo Garantia 7 Dias" loading="lazy">
+          </div>
+          <div>
+            <h3 style="color: #0c0a08;">Garantia incondicional de 7 dias</h3>
+            <p class="mb-0">
+              Ao entrar, você pode acessar o material, conhecer os documentos e entender a estrutura do produto. Se
+              dentro de 7 dias você perceber que ele não é para você, basta solicitar o reembolso dentro do prazo de
+              garantia. <strong style="color: #0c0a08;">Sem complicação. Você entra com muito mais tranquilidade para
+                conhecer o conteúdo por dentro.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17. FAQ -->
+    <section class="section" id="faq">
+      <div class="container" style="max-width: 680px;">
+        <div class="reveal text-center" style="margin-bottom: 1.5rem;">
+          <span class="overline">Dúvidas</span>
+          <h2>Perguntas frequentes</h2>
+        </div>
+
+        <div class="reveal">
+          <details class="faq-item">
+            <summary>Esse material serve apenas para empresários?<span class="faq-icon"></span></summary>
+            <div class="faq-content">Não. Embora tenha sido pensado principalmente para empresários de pequenas e médias
+              empresas, ele também pode ser útil para gestores, RH, DP e advogados.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>O produto entrega só o contrato?<span class="faq-icon"></span></summary>
+            <div class="faq-content">Não. Além do contrato principal, você recebe documentos complementares, tutorial em
+              vídeo e conteúdos extras sobre contratação e condução da relação com o prestador.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Esse material garante que nunca haverá processo?<span class="faq-icon"></span></summary>
+            <div class="faq-content">Nenhum material sério deve prometer isso. O objetivo aqui é aumentar a segurança da
+              contratação, reduzir improvisos e ajudar a empresa a tomar decisões mais conscientes e estruturadas.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>O acesso é por quanto tempo?<span class="faq-icon"></span></summary>
+            <div class="faq-content">O acesso é imediato e vitalício.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Vou receber atualizações?<span class="faq-icon"></span></summary>
+            <div class="faq-content">Sim. Você recebe as atualizações dos modelos incluídas no produto.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Posso parcelar?<span class="faq-icon"></span></summary>
+            <div class="faq-content">Sim. O valor pode ser parcelado em até 12x.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Tenho suporte para tirar dúvidas?<span class="faq-icon"></span></summary>
+            <div class="faq-content">Sim. O produto conta com encontros mensais no Zoom com a Michelle e grupo no
+              WhatsApp para atualizações da área trabalhista.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18. FECHAMENTO -->
+    <section class="section" id="fechamento"
+      style="background: linear-gradient(180deg, var(--bg) 0%, rgba(212,175,55,0.02) 100%);">
+      <div class="container">
+        <div class="final-cta reveal">
+          <h2>A decisão é simples:</h2>
+          <p>Você pode continuar contratando no improviso, torcendo para que esteja tudo certo.</p>
+          <p>Ou pode estruturar essa contratação com mais clareza, mais segurança e muito mais inteligência.</p>
+          <p style="margin-bottom: 1.25rem;">Se a sua empresa quer crescer com mais maturidade, precisa começar a tratar
+            contratação como fundamento, não como detalhe.</p>
+          <a href="#oferta" class="btn"><span class="btn-text">Quero Contratar PJ e MEI Com Mais Segurança</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-logo">
+          <img src="Imagens/logo-michelle-coelho.webp" alt="Michelle Coelho" loading="lazy">
+        </div>
+        <p>© 2026 Modelo de Contrato de Prestação de Serviços Inteligente. Todos os direitos reservados.</p>
+        <p>Michelle Coelho - Consultoria Empresarial Trabalhista | CNPJ 42.735.832/0001-04 | <a
+            href="mailto:michelle@michellecoelho.com.br">michelle@michellecoelho.com.br</a></p>
+      </div>
+    </footer>
+
+    <!-- STICKY CTA -->
+    <div class="sticky-cta" id="stickyCta">
+      <div class="container">
+        <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Acessar Agora</span></a>
+      </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511921450444?text=Ol%C3%A1%21%20Vim%20pelo%20produto%20Modelo%20de%20Contrato%20de%20Presta%C3%A7%C3%A3o%20de%20Servi%C3%A7os%20Inteligente%20e%20preciso%20de%20suporte.%20Pode%20me%20ajudar%3F" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale no WhatsApp - Olá! Vim pelo produto Modelo de Contrato de Prestação de Serviços Inteligente e preciso de suporte. Pode me ajudar?">
+      <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+      </svg>
+    </a>
+  </main>
+
+  <script>
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    const stickyCta = document.getElementById('stickyCta');
+    const hero = document.querySelector('.hero');
+    const fechamento = document.getElementById('fechamento');
+
+    if (stickyCta && hero && fechamento) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.target === hero) stickyCta.classList.toggle('visible', !entry.isIntersecting);
+          if (entry.target === fechamento) stickyCta.classList.toggle('hidden', entry.isIntersecting);
+        });
+      }, { threshold: 0.1 });
+      observer.observe(hero);
+      observer.observe(fechamento);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+# Ignore temporary and system files
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Ignore development files
+*.bak
+*.swp
+*~
+
+# Ignore documentation that shouldn't be committed
+_CPS*
