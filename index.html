@@ -696,11 +696,14 @@
     }
 
     .hero-content .overline {
+      display: inline-flex;
+      align-items: center;
       max-width: 100%;
       margin-bottom: 20px;
       font-size: 0.75rem;
       padding: 8px 16px;
       line-height: 1.4;
+      white-space: normal;
     }
 
     .hero h1 {
@@ -709,10 +712,6 @@
       font-size: 3.45rem;
       line-height: 1.08;
       letter-spacing: 0;
-    }
-
-    .hero-title-line {
-      display: block;
     }
 
     .hero .lead {
@@ -863,84 +862,128 @@
     @media (max-width: 768px) {
       .hero {
         background-image: url("Imagens/Imagem\ bg\ mobile.webp");
-        background-position: 68% top;
+        background-position: 82% top;
+        background-size: cover;
         align-items: flex-start;
-        min-height: 92svh;
-        padding: 86px 0 56px;
+        min-height: 0;
+        padding: 72px 0 48px;
       }
 
       .hero::before {
         background:
-          linear-gradient(90deg, rgba(5, 3, 2, 0.94) 0%, rgba(5, 3, 2, 0.76) 48%, rgba(5, 3, 2, 0.28) 100%),
-          linear-gradient(180deg, rgba(5, 3, 2, 0.12) 0%, rgba(5, 3, 2, 0.68) 100%);
+          linear-gradient(90deg, rgba(5, 3, 2, 0.98) 0%, rgba(5, 3, 2, 0.94) 54%, rgba(5, 3, 2, 0.72) 100%),
+          linear-gradient(180deg, rgba(5, 3, 2, 0.18) 0%, rgba(5, 3, 2, 0.78) 100%);
       }
-      
+
       .hero-content {
         width: 100%;
-        max-width: 360px;
+        max-width: 330px;
+      }
+
+      .hero-content .overline {
+        max-width: 310px;
+        margin-bottom: 18px;
+        padding: 7px 12px;
+        font-size: 0.66rem;
+        line-height: 1.35;
       }
 
       .hero h1 {
-        max-width: 340px;
-        margin-bottom: 18px;
-        font-size: 2rem;
-        line-height: 1.12;
+        max-width: 330px;
+        margin-bottom: 16px;
+        font-size: 1.72rem;
+        line-height: 1.14;
       }
 
       .hero .lead {
-        max-width: 340px;
-        font-size: 0.95rem;
-        line-height: 1.5;
+        max-width: 320px;
+        font-size: 0.9rem;
+        line-height: 1.45;
         color: rgba(255, 255, 255, 0.9);
       }
 
       .hero-actions {
-        margin-top: 26px;
-        max-width: 340px;
+        margin-top: 24px;
+        max-width: 320px;
       }
 
       .hero-actions .btn {
-        min-height: 54px;
-        padding: 0.85rem 1rem;
-        font-size: 0.76rem;
+        min-height: 50px;
+        padding: 0.8rem 1rem;
+        font-size: 0.72rem;
       }
 
       .hero-trust {
-        gap: 12px 16px;
-        font-size: 0.75rem;
+        max-width: 320px;
+        margin-top: 20px;
+        gap: 8px;
+        font-size: 0.72rem;
+        line-height: 1.35;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-content {
+        max-width: 315px;
+      }
+
+      .hero h1 {
+        max-width: 315px;
+        font-size: 1.58rem;
+      }
+
+      .hero .lead,
+      .hero-actions,
+      .hero-trust {
+        max-width: 305px;
       }
     }
 
     /* Mobile pequeno */
     @media (max-width: 480px) {
       .hero {
-        background-position: 70% top;
-        padding-top: 78px;
+        background-position: 84% top;
+        padding-top: 70px;
       }
 
       .hero-content {
-        max-width: 340px;
+        max-width: 300px;
       }
 
       .hero-content .overline {
-        font-size: 0.65rem;
-        padding: 7px 12px;
-        margin-bottom: 18px;
+        max-width: 295px;
+        margin-bottom: 16px;
+        font-size: 0.6rem;
       }
 
       .hero h1 {
-        max-width: 320px;
-        font-size: 1.68rem;
+        max-width: 300px;
+        font-size: 1.48rem;
+        line-height: 1.15;
       }
 
       .hero .lead {
-        max-width: 320px;
-        font-size: 0.9rem;
+        max-width: 300px;
+        font-size: 0.84rem;
       }
 
       .hero-actions,
       .hero-trust {
-        max-width: 320px;
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-content,
+      .hero h1,
+      .hero .lead,
+      .hero-actions,
+      .hero-trust {
+        max-width: 286px;
+      }
+
+      .hero h1 {
+        font-size: 1.38rem;
       }
     }
 
@@ -2156,11 +2199,9 @@
             <p class="overline">Modelo de Contrato de Prestação de Serviços</p>
 
             <h1 id="hero-title">
-              <span class="hero-title-line">Contrate PJ ou MEI</span>
-              <span class="hero-title-line">com mais segurança,</span>
-              <span class="hero-title-line"><span class="gold-text">sem improviso</span> e</span>
-              <span class="hero-title-line">protegendo a empresa</span>
-              <span class="hero-title-line">de problemas na Justiça do Trabalho</span>
+              Contrate PJ ou MEI com mais segurança,
+              <span class="gold-text">sem improviso</span>
+              e protegendo a empresa de problemas na Justiça do Trabalho
             </h1>
 
             <p class="lead">
