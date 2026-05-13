@@ -862,17 +862,23 @@
     @media (max-width: 768px) {
       .hero {
         background-image: url("Imagens/Imagem\ bg\ mobile.webp");
-        background-position: 82% top;
+        background-position: center top;
         background-size: cover;
+        background-repeat: no-repeat;
         align-items: flex-start;
         min-height: 0;
-        padding: 58px 0 42px;
+        padding: 245px 0 40px;
+      }
+
+      .hero .container {
+        max-width: 100%;
+        padding-inline: 1rem;
+        overflow: hidden;
       }
 
       .hero::before {
         background:
-          linear-gradient(90deg, rgba(5, 3, 2, 0.98) 0%, rgba(5, 3, 2, 0.94) 54%, rgba(5, 3, 2, 0.72) 100%),
-          linear-gradient(180deg, rgba(5, 3, 2, 0.18) 0%, rgba(5, 3, 2, 0.78) 100%);
+          linear-gradient(180deg, rgba(5, 3, 2, 0.08) 0%, rgba(5, 3, 2, 0.28) 24%, rgba(5, 3, 2, 0.88) 48%, #050302 72%);
       }
 
       .hero-content {
@@ -881,10 +887,10 @@
       }
 
       .hero-content .overline {
-        max-width: 100%;
-        margin-bottom: 14px;
-        padding: 6px 11px;
-        font-size: 0.58rem;
+        max-width: 300px;
+        margin-bottom: 12px;
+        padding: 6px 10px;
+        font-size: 0.56rem;
         line-height: 1.3;
         letter-spacing: 0.04em;
       }
@@ -892,9 +898,9 @@
       .hero h1 {
         max-width: 330px;
         margin-bottom: 14px;
-        font-size: 1.44rem;
+        font-size: 1.42rem;
         line-height: 1.15;
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
       }
 
       .hero .lead {
@@ -905,11 +911,12 @@
       }
 
       .hero-actions {
-        margin-top: 22px;
+        margin-top: 20px;
         max-width: 320px;
       }
 
       .hero-actions .btn {
+        max-width: 100%;
         min-height: 48px;
         padding: 0.75rem 1rem;
         font-size: 0.68rem;
@@ -917,14 +924,18 @@
 
       .hero .hero-trust {
         max-width: 320px;
-        margin-top: 18px;
-        gap: 6px;
+        margin-top: 16px;
+        gap: 6px 12px;
         font-size: 0.68rem;
         line-height: 1.35;
       }
     }
 
     @media (max-width: 640px) {
+      .hero {
+        padding-top: 235px;
+      }
+
       .hero-content {
         max-width: 315px;
       }
@@ -944,8 +955,7 @@
     /* Mobile pequeno */
     @media (max-width: 480px) {
       .hero {
-        background-position: 84% top;
-        padding-top: 54px;
+        padding-top: 228px;
       }
 
       .hero-content {
@@ -976,6 +986,10 @@
     }
 
     @media (max-width: 380px) {
+      .hero {
+        padding-top: 220px;
+      }
+
       .hero-content,
       .hero h1,
       .hero .lead,
@@ -985,7 +999,7 @@
       }
 
       .hero h1 {
-        font-size: 1.18rem;
+        font-size: 1.28rem;
       }
     }
 
