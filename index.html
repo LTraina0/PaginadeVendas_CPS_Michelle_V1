@@ -7,9 +7,38 @@
   <title>Modelo de Contrato de Prestação de Serviços Inteligente | Michelle Coelho</title>
   <meta name="description"
     content="Contrate PJ ou MEI com mais segurança, sem improviso e protegendo a empresa de problemas na Justiça do Trabalho.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#050302">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://ltraina0.github.io/PaginadeVendas_CPS_Michelle_V1/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Michelle Coelho">
+  <meta property="og:title" content="Modelo de Contrato de Prestação de Serviços Inteligente | Michelle Coelho">
+  <meta property="og:description"
+    content="Contrate PJ ou MEI com mais segurança, sem improviso, protegendo a empresa de problemas na Justiça do Trabalho.">
+  <meta property="og:url" content="https://ltraina0.github.io/PaginadeVendas_CPS_Michelle_V1/">
+  <meta property="og:image"
+    content="https://ltraina0.github.io/PaginadeVendas_CPS_Michelle_V1/Imagens/mockupcpsprincipal.webp">
+  <meta property="og:image:alt" content="Mockup do Modelo de Contrato de Prestação de Serviços Inteligente">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Modelo de Contrato de Prestação de Serviços Inteligente | Michelle Coelho">
+  <meta name="twitter:description"
+    content="Contrate PJ ou MEI com mais segurança, sem improviso, protegendo a empresa de problemas na Justiça do Trabalho.">
+  <meta name="twitter:image"
+    content="https://ltraina0.github.io/PaginadeVendas_CPS_Michelle_V1/Imagens/mockupcpsprincipal.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="Imagens/imagem%20bg%20desktop.webp" media="(min-width: 1025px)"
+    fetchpriority="high">
+  <link rel="preload" as="image" href="Imagens/imagem%20bg%20tablet%20horizontal.webp"
+    media="(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)" fetchpriority="high">
+  <link rel="preload" as="image" href="Imagens/imagem%20bg%20tablet%20vertical.webp"
+    media="(min-width: 768px) and (max-width: 1024px) and (orientation: portrait)" fetchpriority="high">
+  <link rel="preload" as="image" href="Imagens/Imagem%20bg%20mobile.webp" media="(max-width: 767px)"
+    fetchpriority="high">
   <style>
     :root {
       --bg: #0c0a08;
@@ -62,7 +91,6 @@
       }
 
       .grid,
-      .cards-grid,
       .grid-3 {
         grid-template-columns: 1fr !important;
       }
@@ -146,12 +174,6 @@
       .feature-row-icon svg {
         width: 22px;
         height: 22px;
-      }
-
-      .item-number {
-        width: 40px;
-        height: 40px;
-        font-size: 0.75rem;
       }
 
       .bento-item {
@@ -494,6 +516,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 8px;
       padding: 1rem 2rem;
       border-radius: 100px;
@@ -544,6 +567,9 @@
     .btn-text {
       position: relative;
       z-index: 2;
+      min-width: 0;
+      white-space: normal;
+      text-wrap: balance;
     }
 
     /* Cards */
@@ -608,59 +634,32 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
-    /* Lists */
-    .checklist {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.625rem;
-    }
-
-    .checklist li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.625rem;
-      font-size: 0.9375rem;
-    }
-
-    .checklist li::before {
-      content: "✓";
-      width: 18px;
-      height: 18px;
-      background: rgba(212, 175, 55, 0.1);
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 50%;
-      flex-shrink: 0;
-      display: grid;
-      place-items: center;
-      font-size: 0.625rem;
-      color: var(--gold);
-      font-weight: 600;
-      margin-top: 3px;
-    }
-
-    .section-cream .checklist li::before {
-      background: rgba(160, 128, 48, 0.1);
-      border-color: rgba(160, 128, 48, 0.2);
-      color: #7a6030;
-    }
-
     /* Hero — layout cinematográfico com proporções controladas */
     .hero {
       position: relative;
-      min-height: min(100svh, 920px);
+      min-height: min(92svh, 900px);
       display: flex;
       align-items: center;
       overflow: hidden;
       isolation: isolate;
 
       background-color: #050302;
-      background-image: url("Imagens/imagem\ bg\ desktop.png");
+      background-image: url("Imagens/imagem\ bg\ desktop.webp");
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center center;
+      background-position: 64% center;
 
-      padding: clamp(96px, 12vh, 160px) 0 clamp(72px, 10vh, 120px);
+      padding: 104px 0 84px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(5, 3, 2, 0.92) 0%, rgba(5, 3, 2, 0.68) 34%, rgba(5, 3, 2, 0.16) 66%, rgba(5, 3, 2, 0.7) 100%);
     }
 
     .hero::after {
@@ -677,15 +676,15 @@
       position: relative;
       z-index: 2;
       width: 100%;
-      max-width: 1200px;
+      max-width: 1240px;
       margin-inline: auto;
     }
 
     .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, 580px) 1fr;
+      grid-template-columns: minmax(0, 540px) minmax(0, 1fr);
       align-items: center;
-      column-gap: clamp(48px, 6vw, 120px);
+      column-gap: 64px;
     }
 
     .hero-content {
@@ -693,42 +692,49 @@
       z-index: 3;
       max-width: 100%;
       text-align: left;
+      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
     }
 
     .hero-content .overline {
-      margin-bottom: 24px;
+      max-width: 100%;
+      margin-bottom: 20px;
       font-size: 0.75rem;
       padding: 8px 16px;
+      line-height: 1.4;
     }
 
     .hero h1 {
-      max-width: 100%;
-      margin: 0 0 24px;
-      font-size: clamp(2.5rem, 4vw, 4.25rem);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
+      max-width: 560px;
+      margin: 0 0 18px;
+      font-size: 3.45rem;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero-title-line {
+      display: block;
     }
 
     .hero .lead {
-      max-width: 90%;
+      max-width: 520px;
       margin: 0;
-      font-size: clamp(1.05rem, 1.2vw, 1.25rem);
-      line-height: 1.6;
+      font-size: 1.05rem;
+      line-height: 1.55;
       color: rgba(255, 255, 255, 0.85);
     }
 
     .hero-actions {
       width: 100%;
-      max-width: 480px;
-      margin-top: 40px;
+      max-width: 440px;
+      margin-top: 30px;
     }
 
     .hero-actions .btn {
       width: 100%;
-      min-height: 64px;
-      padding: 1rem 2rem;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
+      min-height: 58px;
+      padding: 0.95rem 1.5rem;
+      font-size: 0.82rem;
+      letter-spacing: 0;
       border-radius: 100px;
       text-align: center;
     }
@@ -743,122 +749,160 @@
       font-weight: 500;
     }
 
-    /* Ocultar elementos visuais antigos se existirem */
-    .hero-visual,
-    .hero-photo-wrap,
-    .hero-photo {
-      display: none !important;
-    }
-
     /* Desktop grande */
     @media (min-width: 1440px) {
       .hero {
         background-size: cover;
+        background-position: 66% center;
       }
       .hero .container {
         max-width: 1320px;
       }
+      .hero-inner {
+        grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
+        column-gap: 80px;
+      }
       .hero h1 {
-        font-size: 4.5rem;
+        max-width: 660px;
+        font-size: 3.55rem;
       }
       .hero .lead {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
       }
     }
 
     /* Ultrawide */
     @media (min-width: 2200px) {
       .hero {
-        background-image: url("Imagens/imaggem_3440x1440px.png");
+        background-image: url("Imagens/imaggem_3440x1440px.webp");
+        background-position: 68% center;
       }
       .hero .container {
-        max-width: 1600px;
+        max-width: 1520px;
       }
       .hero h1 {
-        font-size: 5rem;
+        font-size: 3.8rem;
       }
     }
 
     /* Notebook / desktop menor */
     @media (max-width: 1399px) {
+      .hero .container {
+        max-width: 1120px;
+      }
       .hero-inner {
-        grid-template-columns: minmax(0, 520px) 1fr;
+        grid-template-columns: minmax(0, 500px) minmax(0, 1fr);
+        column-gap: 48px;
       }
       .hero h1 {
-        font-size: clamp(2.5rem, 3.8vw, 3.5rem);
+        font-size: 3rem;
       }
       .hero .lead {
-        font-size: 1.05rem;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 1180px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 2.65rem;
       }
     }
 
     /* Tablet horizontal */
     @media (max-width: 1024px) and (orientation: landscape) {
       .hero {
-        background-image: url("Imagens/imagem\ bg\ tablet\ horizontal.png");
-        min-height: 80svh;
+        background-image: url("Imagens/imagem\ bg\ tablet\ horizontal.webp");
+        background-position: center center;
+        min-height: min(88svh, 760px);
+        padding: 72px 0 56px;
       }
       .hero-inner {
-        grid-template-columns: minmax(0, 480px) 1fr;
+        grid-template-columns: minmax(0, 400px) 1fr;
+        column-gap: 32px;
       }
       .hero h1 {
-        font-size: 2.75rem;
+        font-size: 2.25rem;
+      }
+      .hero .lead {
+        font-size: 0.95rem;
+      }
+      .hero-actions {
+        max-width: 380px;
+        margin-top: 24px;
       }
     }
 
     /* Tablet vertical */
     @media (max-width: 1024px) and (orientation: portrait) {
       .hero {
-        background-image: url("Imagens/imagem\ bg\ tablet\ vertical.png");
+        background-image: url("Imagens/imagem\ bg\ tablet\ vertical.webp");
         background-position: center top;
         align-items: flex-start;
-        padding-top: 120px;
+        min-height: 88svh;
+        padding: 104px 0 72px;
       }
       .hero-inner {
         grid-template-columns: 1fr;
       }
       .hero-content {
-        max-width: 600px;
+        max-width: 560px;
+      }
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+      .hero .lead {
+        max-width: 460px;
       }
     }
 
     /* Mobile */
     @media (max-width: 768px) {
       .hero {
-        background-image: url("Imagens/Imagem\ bg\ mobile.png");
-        background-position: 65% top;
-        padding-top: 100px;
-        padding-bottom: 64px;
-        min-height: 100svh;
+        background-image: url("Imagens/Imagem\ bg\ mobile.webp");
+        background-position: 68% top;
+        align-items: flex-start;
+        min-height: 92svh;
+        padding: 86px 0 56px;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(90deg, rgba(5, 3, 2, 0.94) 0%, rgba(5, 3, 2, 0.76) 48%, rgba(5, 3, 2, 0.28) 100%),
+          linear-gradient(180deg, rgba(5, 3, 2, 0.12) 0%, rgba(5, 3, 2, 0.68) 100%);
       }
       
       .hero-content {
-        max-width: 85%;
+        width: 100%;
+        max-width: 360px;
       }
 
       .hero h1 {
-        font-size: clamp(2rem, 8vw, 2.5rem);
-        line-height: 1.15;
-        margin-bottom: 20px;
-        max-width: none;
+        max-width: 340px;
+        margin-bottom: 18px;
+        font-size: 2rem;
+        line-height: 1.12;
       }
 
       .hero .lead {
-        font-size: 1rem;
+        max-width: 340px;
+        font-size: 0.95rem;
         line-height: 1.5;
-        max-width: 100%;
         color: rgba(255, 255, 255, 0.9);
       }
 
       .hero-actions {
-        margin-top: 32px;
-        max-width: 100%;
+        margin-top: 26px;
+        max-width: 340px;
       }
 
       .hero-actions .btn {
-        min-height: 56px;
-        padding: 0.875rem 1.5rem;
-        font-size: 0.85rem;
+        min-height: 54px;
+        padding: 0.85rem 1rem;
+        font-size: 0.76rem;
       }
 
       .hero-trust {
@@ -870,20 +914,33 @@
     /* Mobile pequeno */
     @media (max-width: 480px) {
       .hero {
-        background-position: 75% top;
-        padding-top: 80px;
+        background-position: 70% top;
+        padding-top: 78px;
       }
 
       .hero-content {
-        max-width: 95%;
+        max-width: 340px;
+      }
+
+      .hero-content .overline {
+        font-size: 0.65rem;
+        padding: 7px 12px;
+        margin-bottom: 18px;
       }
 
       .hero h1 {
-        font-size: 1.875rem;
+        max-width: 320px;
+        font-size: 1.68rem;
       }
 
       .hero .lead {
-        font-size: 0.9375rem;
+        max-width: 320px;
+        font-size: 0.9rem;
+      }
+
+      .hero-actions,
+      .hero-trust {
+        max-width: 320px;
       }
     }
 
@@ -1092,34 +1149,6 @@
       z-index: 1;
     }
 
-    .price-separator {
-      width: 40px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
-      margin: 1.25rem auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .guarantee-inline {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 1rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .guarantee-inline svg {
-      width: 14px;
-      height: 14px;
-      color: var(--gold);
-      flex-shrink: 0;
-    }
-
     .price-installments {
       font-size: 0.9375rem;
       color: var(--text-secondary);
@@ -1161,20 +1190,6 @@
       background: rgba(212, 175, 55, 0.05);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-    }
-
-    .guarantee-icon {
-      width: 72px;
-      height: 72px;
-      flex-shrink: 0;
-      display: grid;
-      place-items: center;
-      background: rgba(212, 175, 55, 0.1);
-      border: 2px solid rgba(212, 175, 55, 0.2);
-      border-radius: 50%;
-      font-size: 1.75rem;
-      font-weight: 600;
-      color: var(--gold);
     }
 
     .guarantee h3 {
@@ -1318,26 +1333,6 @@
       display: flex;
       gap: 1rem;
       align-items: flex-start;
-    }
-
-    .item-number {
-      width: 44px;
-      height: 44px;
-      flex-shrink: 0;
-      display: grid;
-      place-items: center;
-      background: rgba(212, 175, 55, 0.08);
-      border: 1px solid rgba(212, 175, 55, 0.18);
-      border-radius: var(--radius-sm);
-      font-size: 0.8125rem;
-      font-weight: 600;
-      color: var(--gold);
-    }
-
-    .section-cream .item-number {
-      background: rgba(160, 128, 48, 0.1);
-      border-color: rgba(160, 128, 48, 0.2);
-      color: #7a6030;
     }
 
     .item-content h3 {
@@ -2126,27 +2121,23 @@
       margin-bottom: 0;
     }
   </style>
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://example.com/">
-<meta property="og:title" content="Modelo de Contrato de Prestação de Serviços Inteligente | Michelle Coelho">
-<meta property="og:description" content="Contrate PJ ou MEI com mais segurança, sem improviso, protegendo a empresa de problemas na Justiça do Trabalho.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://example.com/">
-<meta property="og:image" content="https://example.com/Imagens/michelle.webp">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Modelo de Contrato de Prestação de Serviços Inteligente | Michelle Coelho">
-<meta name="twitter:description" content="Contrate PJ ou MEI com mais segurança, sem improviso, protegendo a empresa de problemas na Justiça do Trabalho.">
-<meta name="twitter:image" content="https://example.com/Imagens/michelle.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Modelo de Contrato de Prestação de Serviços Inteligente",
   "description": "Modelo de contrato prático para contratação de PJ, MEI ou prestadores de serviços com segurança jurídica.",
+  "url": "https://ltraina0.github.io/PaginadeVendas_CPS_Michelle_V1/",
+  "image": "https://ltraina0.github.io/PaginadeVendas_CPS_Michelle_V1/Imagens/mockupcpsprincipal.webp",
+  "brand": {
+    "@type": "Brand",
+    "name": "Michelle Coelho"
+  },
   "offers": {
     "@type": "Offer",
     "priceCurrency": "BRL",
     "price": "97",
+    "availability": "https://schema.org/InStock",
     "url": "https://pay.hotmart.com/Y97284855G?checkoutMode=10"
   }
 }
@@ -2165,9 +2156,11 @@
             <p class="overline">Modelo de Contrato de Prestação de Serviços</p>
 
             <h1 id="hero-title">
-              Contrate PJ ou MEI com mais segurança,
-              <span class="gold-text">sem improviso</span>
-              e protegendo a empresa de problemas na Justiça do Trabalho
+              <span class="hero-title-line">Contrate PJ ou MEI</span>
+              <span class="hero-title-line">com mais segurança,</span>
+              <span class="hero-title-line"><span class="gold-text">sem improviso</span> e</span>
+              <span class="hero-title-line">protegendo a empresa</span>
+              <span class="hero-title-line">de problemas na Justiça do Trabalho</span>
             </h1>
 
             <p class="lead">
@@ -2177,8 +2170,10 @@
             </p>
 
             <div class="hero-actions">
-              <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer">
-                <span class="btn-text">Quero acessar o modelo de contrato de prestação de serviços inteligente</span>
+              <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Quero acessar o Modelo de Contrato de Prestação de Serviços Inteligente">
+                <span class="btn-text">Quero acessar o modelo agora</span>
               </a>
             </div>
 
@@ -2308,7 +2303,7 @@
 
           <div class="reveal" style="height: 100%;">
             <div class="card" style="height: 100%; display: grid; place-items: center; overflow: hidden;">
-              <img src="Imagens/placeholder-mockup-cps.webp" alt="Modelo de Contrato de Prestação de Serviços" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+              <img src="Imagens/placeholder-mockup-cps.webp" alt="Mockup do Modelo de Contrato de Prestação de Serviços Inteligente" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
             </div>
           </div>
         </div>
@@ -2327,12 +2322,16 @@
         content: "";
         position: absolute;
         inset: 0;
-        background-image: url("Imagens/o perigo.png");
+        background-image: none;
         background-size: cover;
         background-position: center;
         opacity: 0.05;
         pointer-events: none;
         z-index: 0;
+      }
+
+      #para-quem.bg-ready::before {
+        background-image: url("Imagens/o perigo.webp");
       }
 
       #para-quem::after {
@@ -2747,7 +2746,7 @@
           <div class="card reveal item-card item-card-media">
             <div class="item-media-wrap">
               <div class="item-media">
-                <img src="Imagens/contrato_prestacao_servicos.png" alt="Item 01" class="item-media-image" loading="lazy"
+                <img src="Imagens/contrato_prestacao_servicos.webp" alt="Modelo de contrato de prestação de serviços" class="item-media-image" loading="lazy" decoding="async"
                   onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
                 <span class="item-media-badge">Item 01</span>
               </div>
@@ -2763,7 +2762,7 @@
           <div class="card reveal item-card item-card-media">
             <div class="item-media-wrap">
               <div class="item-media">
-                <img src="Imagens/termo_aditivo.png" alt="Item 02" class="item-media-image" loading="lazy"
+                <img src="Imagens/termo_aditivo.webp" alt="Termo aditivo contratual" class="item-media-image" loading="lazy" decoding="async"
                   onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
                 <span class="item-media-badge">Item 02</span>
               </div>
@@ -2778,7 +2777,7 @@
           <div class="card reveal item-card item-card-media">
             <div class="item-media-wrap">
               <div class="item-media">
-                <img src="Imagens/modelo_distrato.png" alt="Item 03" class="item-media-image" loading="lazy"
+                <img src="Imagens/modelo_distrato.webp" alt="Modelo de distrato contratual" class="item-media-image" loading="lazy" decoding="async"
                   onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
                 <span class="item-media-badge">Item 03</span>
               </div>
@@ -2793,7 +2792,7 @@
           <div class="card reveal item-card item-card-media">
             <div class="item-media-wrap">
               <div class="item-media">
-                <img src="Imagens/termo_freelancer.png" alt="Item 04" class="item-media-image" loading="lazy"
+                <img src="Imagens/termo_freelancer.webp" alt="Termo para contratação de freelancer" class="item-media-image" loading="lazy" decoding="async"
                   onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
                 <span class="item-media-badge">Item 04</span>
               </div>
@@ -2808,7 +2807,7 @@
           <div class="card reveal item-card item-card-media">
             <div class="item-media-wrap">
               <div class="item-media">
-                <img src="Imagens/recibo_pagamento.png" alt="Item 05" class="item-media-image" loading="lazy"
+                <img src="Imagens/recibo_pagamento.webp" alt="Modelo de recibo de pagamento" class="item-media-image" loading="lazy" decoding="async"
                   onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
                 <span class="item-media-badge">Item 05</span>
               </div>
@@ -2823,7 +2822,7 @@
           <div class="card reveal item-card item-card-media">
             <div class="item-media-wrap">
               <div class="item-media">
-                <img src="Imagens/tutorial_video.png" alt="Item 06" class="item-media-image" loading="lazy"
+                <img src="Imagens/tutorial_video.webp" alt="Tutorial em vídeo do material" class="item-media-image" loading="lazy" decoding="async"
                   onerror="this.style.display='none'; this.parentElement.classList.add('item-media-placeholder');">
                 <span class="item-media-badge">Item 06</span>
               </div>
@@ -3464,7 +3463,7 @@
         <div class="grid grid-2" style="align-items: center; gap: 2.5rem;">
           <div class="reveal">
             <div class="especialista-img">
-              <img src="Imagens/michelle.webp" alt="Michelle Coelho - Consultoria Empresarial Trabalhista" loading="lazy">
+              <img src="Imagens/michelle.webp" alt="Michelle Coelho, especialista em Consultoria Empresarial Trabalhista" loading="lazy" decoding="async">
             </div>
           </div>
 
@@ -3566,7 +3565,7 @@
           <h2>Hoje, você recebe:</h2>
         </div>
 
-        <div class="offer-list reveal">
+        <div class="offer-list reveal" style="max-width: 640px; margin: 0 auto 1.25rem;">
           <div class="offer-item">
             <div class="offer-icon">01</div>
             <span class="offer-text">Modelo de Contrato de Prestação de Serviços Inteligente</span>
@@ -3593,44 +3592,30 @@
           </div>
         </div>
 
-        <div class="bonus-pill reveal">Bônus: masterclass, aula sobre condução segura, encontros mensais e grupo no
-          WhatsApp</div>
+        <div class="bonus-pill reveal" style="margin: 0 auto 3rem;">Bônus: masterclass, aula sobre condução segura, encontros mensais e grupo no WhatsApp</div>
 
-        <div class="price-section reveal">
-          <div class="price-badge">Oferta Especial</div>
-          <div class="price-old">De R$297,00</div>
-          <div class="price-current">R$97</div>
-          <div class="savings-tag">Economia de 67%</div>
-          <p class="price-installments">ou <strong>12x de R$10,03</strong></p>
-          <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Acessar Agora</span></a>
-          <div class="price-separator"></div>
-          <div class="price-features">
-            <span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M2 12h20" />
-              </svg>
-              Acesso imediato
-            </span>
-            <span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-              </svg>
-              Acesso vitalício
-            </span>
-            <span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              Garantia de 7 dias
-            </span>
-          </div>
-          <div class="guarantee-inline">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path
-                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-            Risco zero: 7 dias para testar com tranquilidade
+        <div class="price-section reveal" style="max-width: 680px; margin: 0 auto; padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem);">
+          <div class="price-badge" style="margin-bottom: 2.5rem;">OFERTA ESPECIAL DE LANÇAMENTO</div>
+
+          <img src="Imagens/mockupcpsprincipal.webp" alt="O que você recebe" loading="lazy" decoding="async" style="width: 100%; max-width: 480px; height: auto; display: block; margin: 0 auto 2.5rem; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));">
+
+          <h3 style="font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 600; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: 0; color: var(--text-primary);">Pronto para estruturar sua<br>empresa com segurança?</h3>
+
+          <div class="price-old" style="font-size: 1.125rem; margin-bottom: 0.75rem;">De R$ 297,00</div>
+
+          <div class="savings-tag" style="margin-bottom: 1.5rem; padding: 6px 16px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; background: transparent; border: 1px solid rgba(212, 175, 55, 0.3); color: var(--gold-light);">ECONOMIA DE 67%</div>
+
+          <div class="price-current" style="font-size: clamp(3.5rem, 8vw, 5rem); margin-bottom: 0.5rem; color: var(--gold-light);">R$ 97,00</div>
+          <p class="price-installments" style="margin-bottom: 2.5rem; font-size: 1rem;">ou <strong>12x de R$ 10,03</strong> no cartão</p>
+
+          <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer" style="width: 100%; max-width: 420px; margin: 0 auto; min-height: 64px; display: flex;"><span class="btn-text" style="font-size: 0.9375rem; letter-spacing: 0; text-transform: uppercase;">Garantir o meu acesso agora &rarr;</span></a>
+
+          <div class="price-features" style="margin-top: 1.5rem; opacity: 0.7; gap: 0.75rem; font-size: 0.8125rem; justify-content: center;">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Pagamento seguro</span>
+            <span style="color: var(--border-strong);">|</span>
+            <span>Acesso imediato</span>
+            <span style="color: var(--border-strong);">|</span>
+            <span>Garantia de 7 dias</span>
           </div>
         </div>
       </div>
@@ -3641,7 +3626,7 @@
       <div class="container">
         <div class="guarantee reveal">
           <div class="guarantee-seal">
-            <img src="Imagens/selo-garantia.webp" alt="Selo Garantia 7 Dias" loading="lazy">
+            <img src="Imagens/selo-garantia.webp" alt="Selo de garantia de 7 dias" loading="lazy" decoding="async">
           </div>
           <div>
             <h3 style="color: #0c0a08;">Garantia incondicional de 7 dias</h3>
@@ -3726,7 +3711,7 @@
     <footer>
       <div class="container">
         <div class="footer-logo">
-          <img src="Imagens/logo-michelle-coelho.webp" alt="Michelle Coelho" loading="lazy">
+          <img src="Imagens/logo-michelle-coelho.webp" alt="Logo Michelle Coelho" loading="lazy" decoding="async">
         </div>
         <p>© 2026 Modelo de Contrato de Prestação de Serviços Inteligente. Todos os direitos reservados.</p>
         <p>Michelle Coelho - Consultoria Empresarial Trabalhista | CNPJ 42.735.832/0001-04 | <a
@@ -3743,7 +3728,7 @@
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/5511921450444?text=Ol%C3%A1%21%20Vim%20pelo%20produto%20Modelo%20de%20Contrato%20de%20Presta%C3%A7%C3%A3o%20de%20Servi%C3%A7os%20Inteligente%20e%20preciso%20de%20suporte.%20Pode%20me%20ajudar%3F" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale no WhatsApp - Olá! Vim pelo produto Modelo de Contrato de Prestação de Serviços Inteligente e preciso de suporte. Pode me ajudar?">
-      <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
         <path
           d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
       </svg>
@@ -3772,6 +3757,26 @@
       }, { threshold: 0.1 });
       observer.observe(hero);
       observer.observe(fechamento);
+    }
+
+    const paraQuem = document.getElementById('para-quem');
+    if (paraQuem) {
+      const loadParaQuemBg = () => paraQuem.classList.add('bg-ready');
+
+      if ('IntersectionObserver' in window) {
+        const paraQuemObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              loadParaQuemBg();
+              obs.disconnect();
+            }
+          });
+        }, { rootMargin: '300px 0px', threshold: 0.01 });
+
+        paraQuemObserver.observe(paraQuem);
+      } else {
+        loadParaQuemBg();
+      }
     }
 
   </script>
