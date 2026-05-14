@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Guia Hero Desktop 1920x1080</title>
+  <desc id="desc">Template com linhas guias para a imagem de fundo desktop do hero.</desc>
+  <defs>
+    <style>
+      .bg { fill: #080807; }
+      .grid { stroke: rgba(255,255,255,.14); stroke-width: 2; }
+      .third { stroke: #f4d16b; stroke-width: 4; stroke-dasharray: 20 14; }
+      .center { stroke: #ffffff; stroke-width: 4; stroke-dasharray: 10 12; }
+      .crop { fill: rgba(255,69,69,.16); stroke: rgba(255,69,69,.7); stroke-width: 2; }
+      .text-safe { fill: rgba(68,190,255,.18); stroke: #44beff; stroke-width: 5; }
+      .visual-safe { fill: rgba(244,209,107,.18); stroke: #f4d16b; stroke-width: 5; }
+      .label { font: 700 34px Arial, sans-serif; fill: #ffffff; }
+      .small { font: 500 25px Arial, sans-serif; fill: rgba(255,255,255,.84); }
+      .tiny { font: 500 22px Arial, sans-serif; fill: rgba(255,255,255,.72); }
+      .outline { fill: none; stroke: #ffffff; stroke-width: 8; }
+    </style>
+    <pattern id="gridPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M 120 0 L 0 0 0 120" fill="none" class="grid"/>
+    </pattern>
+  </defs>
+
+  <rect width="1920" height="1080" class="bg"/>
+  <rect width="1920" height="1080" fill="url(#gridPattern)"/>
+
+  <rect x="0" y="0" width="154" height="1080" class="crop"/>
+  <rect x="1766" y="0" width="154" height="1080" class="crop"/>
+  <rect x="0" y="0" width="1920" height="86" class="crop"/>
+  <rect x="0" y="994" width="1920" height="86" class="crop"/>
+
+  <line x1="640" y1="0" x2="640" y2="1080" class="third"/>
+  <line x1="1280" y1="0" x2="1280" y2="1080" class="third"/>
+  <line x1="0" y1="360" x2="1920" y2="360" class="third"/>
+  <line x1="0" y1="720" x2="1920" y2="720" class="third"/>
+  <line x1="960" y1="0" x2="960" y2="1080" class="center"/>
+  <line x1="0" y1="540" x2="1920" y2="540" class="center"/>
+
+  <rect x="120" y="120" width="770" height="800" rx="24" class="text-safe"/>
+  <text x="155" y="190" class="label">AREA SEGURA TEXTO</text>
+  <text x="155" y="235" class="small">Manter fundo escuro/limpo</text>
+  <text x="155" y="275" class="small">Texto real fica no lado esquerdo</text>
+
+  <rect x="980" y="100" width="660" height="850" rx="24" class="visual-safe"/>
+  <text x="1020" y="170" class="label">FOCO VISUAL</text>
+  <text x="1020" y="215" class="small">Pessoa/produto principal</text>
+  <text x="1020" y="255" class="small">Posicao CSS: 64%-66% center</text>
+
+  <text x="154" y="1040" class="tiny">MARGEM VERMELHA = pode cortar no cover. Evite rosto, logo e texto embutido nas bordas.</text>
+  <text x="1530" y="1040" class="tiny">1920 x 1080 | 16:9</text>
+  <rect x="4" y="4" width="1912" height="1072" class="outline"/>
+</svg>

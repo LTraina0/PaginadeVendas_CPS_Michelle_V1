@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3440" height="1440" viewBox="0 0 3440 1440" role="img" aria-labelledby="title desc">
+  <title id="title">Guia Hero Ultrawide 3440x1440</title>
+  <desc id="desc">Template com linhas guias para a imagem de fundo ultrawide do hero.</desc>
+  <defs>
+    <style>
+      .bg { fill: #080807; }
+      .grid { stroke: rgba(255,255,255,.12); stroke-width: 2; }
+      .third { stroke: #f4d16b; stroke-width: 5; stroke-dasharray: 24 18; }
+      .center { stroke: #ffffff; stroke-width: 5; stroke-dasharray: 12 14; }
+      .crop { fill: rgba(255,69,69,.15); stroke: rgba(255,69,69,.7); stroke-width: 2; }
+      .text-safe { fill: rgba(68,190,255,.18); stroke: #44beff; stroke-width: 6; }
+      .visual-safe { fill: rgba(244,209,107,.18); stroke: #f4d16b; stroke-width: 6; }
+      .label { font: 700 46px Arial, sans-serif; fill: #ffffff; }
+      .small { font: 500 34px Arial, sans-serif; fill: rgba(255,255,255,.84); }
+      .tiny { font: 500 30px Arial, sans-serif; fill: rgba(255,255,255,.72); }
+      .outline { fill: none; stroke: #ffffff; stroke-width: 10; }
+    </style>
+    <pattern id="gridPattern" width="160" height="160" patternUnits="userSpaceOnUse">
+      <path d="M 160 0 L 0 0 0 160" fill="none" class="grid"/>
+    </pattern>
+  </defs>
+
+  <rect width="3440" height="1440" class="bg"/>
+  <rect width="3440" height="1440" fill="url(#gridPattern)"/>
+
+  <rect x="0" y="0" width="240" height="1440" class="crop"/>
+  <rect x="3200" y="0" width="240" height="1440" class="crop"/>
+  <rect x="0" y="0" width="3440" height="115" class="crop"/>
+  <rect x="0" y="1325" width="3440" height="115" class="crop"/>
+
+  <line x1="1147" y1="0" x2="1147" y2="1440" class="third"/>
+  <line x1="2293" y1="0" x2="2293" y2="1440" class="third"/>
+  <line x1="0" y1="480" x2="3440" y2="480" class="third"/>
+  <line x1="0" y1="960" x2="3440" y2="960" class="third"/>
+  <line x1="1720" y1="0" x2="1720" y2="1440" class="center"/>
+  <line x1="0" y1="720" x2="3440" y2="720" class="center"/>
+
+  <rect x="280" y="170" width="1160" height="980" rx="30" class="text-safe"/>
+  <text x="335" y="255" class="label">AREA SEGURA TEXTO</text>
+  <text x="335" y="315" class="small">Lado esquerdo limpo e escuro</text>
+  <text x="335" y="365" class="small">Nao usar elementos importantes atras do texto</text>
+
+  <rect x="1830" y="160" width="1120" height="1060" rx="30" class="visual-safe"/>
+  <text x="1890" y="245" class="label">FOCO VISUAL</text>
+  <text x="1890" y="305" class="small">Pessoa/produto principal</text>
+  <text x="1890" y="355" class="small">Posicao CSS: 68% center</text>
+
+  <text x="240" y="1392" class="tiny">MARGEM VERMELHA = pode cortar no cover. Deixe respiro extra em ultrawide.</text>
+  <text x="2830" y="1392" class="tiny">3440 x 1440 | 21:9 aprox.</text>
+  <rect x="5" y="5" width="3430" height="1430" class="outline"/>
+</svg>

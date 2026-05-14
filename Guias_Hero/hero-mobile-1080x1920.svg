@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="title desc">
+  <title id="title">Guia Hero Mobile 1080x1920</title>
+  <desc id="desc">Template com linhas guias para a imagem de fundo mobile do hero.</desc>
+  <defs>
+    <style>
+      .bg { fill: #080807; }
+      .grid { stroke: rgba(255,255,255,.14); stroke-width: 2; }
+      .third { stroke: #f4d16b; stroke-width: 4; stroke-dasharray: 18 12; }
+      .center { stroke: #ffffff; stroke-width: 4; stroke-dasharray: 10 12; }
+      .start { stroke: #ff8a45; stroke-width: 6; stroke-dasharray: 24 12; }
+      .crop { fill: rgba(255,69,69,.16); stroke: rgba(255,69,69,.7); stroke-width: 2; }
+      .text-safe { fill: rgba(68,190,255,.18); stroke: #44beff; stroke-width: 5; }
+      .visual-safe { fill: rgba(244,209,107,.18); stroke: #f4d16b; stroke-width: 5; }
+      .label { font: 700 32px Arial, sans-serif; fill: #ffffff; }
+      .small { font: 500 24px Arial, sans-serif; fill: rgba(255,255,255,.84); }
+      .tiny { font: 500 21px Arial, sans-serif; fill: rgba(255,255,255,.72); }
+      .outline { fill: none; stroke: #ffffff; stroke-width: 7; }
+    </style>
+    <pattern id="gridPattern" width="90" height="90" patternUnits="userSpaceOnUse">
+      <path d="M 90 0 L 0 0 0 90" fill="none" class="grid"/>
+    </pattern>
+  </defs>
+
+  <rect width="1080" height="1920" class="bg"/>
+  <rect width="1080" height="1920" fill="url(#gridPattern)"/>
+
+  <rect x="0" y="0" width="65" height="1920" class="crop"/>
+  <rect x="1015" y="0" width="65" height="1920" class="crop"/>
+  <rect x="0" y="0" width="1080" height="96" class="crop"/>
+  <rect x="0" y="1824" width="1080" height="96" class="crop"/>
+
+  <line x1="360" y1="0" x2="360" y2="1920" class="third"/>
+  <line x1="720" y1="0" x2="720" y2="1920" class="third"/>
+  <line x1="0" y1="640" x2="1080" y2="640" class="third"/>
+  <line x1="0" y1="1280" x2="1080" y2="1280" class="third"/>
+  <line x1="540" y1="0" x2="540" y2="1920" class="center"/>
+  <line x1="0" y1="960" x2="1080" y2="960" class="center"/>
+  <line x1="0" y1="245" x2="1080" y2="245" class="start"/>
+  <line x1="0" y1="520" x2="1080" y2="520" class="start"/>
+
+  <rect x="270" y="70" width="540" height="430" rx="22" class="visual-safe"/>
+  <text x="312" y="132" class="label">FOCO VISUAL TOPO</text>
+  <text x="312" y="175" class="small">Rosto/produto principal</text>
+  <text x="312" y="212" class="small">CSS: center top</text>
+
+  <rect x="80" y="560" width="920" height="920" rx="22" class="text-safe"/>
+  <text x="120" y="625" class="label">AREA SEGURA TEXTO</text>
+  <text x="120" y="670" class="small">Texto e CTA ocupam esta faixa</text>
+  <text x="120" y="707" class="small">Evite texto embutido na imagem</text>
+
+  <text x="70" y="234" class="tiny">Linha laranja: inicio aproximado do conteudo no CSS mobile (228-245px)</text>
+  <text x="70" y="510" class="tiny">Abaixo daqui a imagem deve estar mais escura para legibilidade</text>
+  <text x="65" y="1878" class="tiny">MARGEM VERMELHA = pode cortar no cover. Exportar em WebP, 1080 x 1920.</text>
+  <text x="780" y="1878" class="tiny">1080 x 1920 | 9:16</text>
+  <rect x="4" y="4" width="1072" height="1912" class="outline"/>
+</svg>

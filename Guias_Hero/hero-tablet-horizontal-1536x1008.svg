@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1008" viewBox="0 0 1536 1008" role="img" aria-labelledby="title desc">
+  <title id="title">Guia Hero Tablet Horizontal 1536x1008</title>
+  <desc id="desc">Template com linhas guias para a imagem de fundo tablet horizontal do hero.</desc>
+  <defs>
+    <style>
+      .bg { fill: #080807; }
+      .grid { stroke: rgba(255,255,255,.14); stroke-width: 2; }
+      .third { stroke: #f4d16b; stroke-width: 4; stroke-dasharray: 18 12; }
+      .center { stroke: #ffffff; stroke-width: 4; stroke-dasharray: 10 12; }
+      .crop { fill: rgba(255,69,69,.16); stroke: rgba(255,69,69,.7); stroke-width: 2; }
+      .text-safe { fill: rgba(68,190,255,.18); stroke: #44beff; stroke-width: 5; }
+      .visual-safe { fill: rgba(244,209,107,.18); stroke: #f4d16b; stroke-width: 5; }
+      .label { font: 700 30px Arial, sans-serif; fill: #ffffff; }
+      .small { font: 500 23px Arial, sans-serif; fill: rgba(255,255,255,.84); }
+      .tiny { font: 500 20px Arial, sans-serif; fill: rgba(255,255,255,.72); }
+      .outline { fill: none; stroke: #ffffff; stroke-width: 7; }
+    </style>
+    <pattern id="gridPattern" width="96" height="96" patternUnits="userSpaceOnUse">
+      <path d="M 96 0 L 0 0 0 96" fill="none" class="grid"/>
+    </pattern>
+  </defs>
+
+  <rect width="1536" height="1008" class="bg"/>
+  <rect width="1536" height="1008" fill="url(#gridPattern)"/>
+
+  <rect x="0" y="0" width="92" height="1008" class="crop"/>
+  <rect x="1444" y="0" width="92" height="1008" class="crop"/>
+  <rect x="0" y="0" width="1536" height="72" class="crop"/>
+  <rect x="0" y="936" width="1536" height="72" class="crop"/>
+
+  <line x1="512" y1="0" x2="512" y2="1008" class="third"/>
+  <line x1="1024" y1="0" x2="1024" y2="1008" class="third"/>
+  <line x1="0" y1="336" x2="1536" y2="336" class="third"/>
+  <line x1="0" y1="672" x2="1536" y2="672" class="third"/>
+  <line x1="768" y1="0" x2="768" y2="1008" class="center"/>
+  <line x1="0" y1="504" x2="1536" y2="504" class="center"/>
+
+  <rect x="86" y="110" width="590" height="730" rx="20" class="text-safe"/>
+  <text x="120" y="170" class="label">AREA SEGURA TEXTO</text>
+  <text x="120" y="210" class="small">Grid do hero usa ~400px no texto</text>
+  <text x="120" y="245" class="small">Manter contraste alto</text>
+
+  <rect x="810" y="100" width="540" height="760" rx="20" class="visual-safe"/>
+  <text x="845" y="160" class="label">FOCO VISUAL</text>
+  <text x="845" y="200" class="small">Pessoa/produto principal</text>
+  <text x="845" y="235" class="small">Posicao CSS: center center</text>
+
+  <text x="92" y="974" class="tiny">MARGEM VERMELHA = pode cortar no cover. Evite informacoes criticas nas bordas.</text>
+  <text x="1154" y="974" class="tiny">1536 x 1008 | 3:2 aprox.</text>
+  <rect x="4" y="4" width="1528" height="1000" class="outline"/>
+</svg>
