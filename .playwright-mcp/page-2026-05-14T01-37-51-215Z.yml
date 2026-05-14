@@ -1,0 +1,395 @@
+- generic [active] [ref=e1]:
+  - link "Pular para conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - main [ref=e3]:
+    - region "Contrate PJ ou MEI com mais segurança, sem improviso e protegendo a empresa de problemas na Justiça do Trabalho" [ref=e4]:
+      - generic [ref=e7]:
+        - paragraph [ref=e8]: Modelo de Contrato de Prestação de Serviços
+        - heading "Contrate PJ ou MEI com mais segurança, sem improviso e protegendo a empresa de problemas na Justiça do Trabalho" [level=1] [ref=e9]
+        - paragraph [ref=e10]: Tenha acesso imediato ao contrato certo, com cláusulas estratégicas, documentos complementares e orientações práticas para contratar, conduzir e encerrar a prestação de serviços com muito mais segurança.
+        - link "Quero acessar o Modelo de Contrato de Prestação de Serviços Inteligente" [ref=e12] [cursor=pointer]:
+          - /url: https://pay.hotmart.com/U97814646I?off=1bgzfy7c
+          - generic [ref=e13]: Quero acessar o modelo agora
+        - generic [ref=e14]:
+          - generic [ref=e15]: Acesso imediato e vitalício
+          - generic [ref=e16]: Atualizações incluídas
+          - generic [ref=e17]: Garantia de 7 dias
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: A Verdade
+        - heading "A verdade é simples" [level=2] [ref=e22]
+      - generic [ref=e23]:
+        - paragraph [ref=e24]:
+          - text: Muitas empresas não têm problema porque agiram de má-fé. Têm problema porque
+          - strong [ref=e25]: contrataram no improviso
+          - text: .
+        - paragraph [ref=e26]: Contratam um PJ ou MEI achando que está tudo certo. Usam um contrato genérico da internet. Deixam o contador "resolver". Copiam o que outra empresa faz. Ou só formalizam "por cima", para não deixar sem papel.
+        - paragraph [ref=e27]: No começo, parece que deu certo.
+        - paragraph [ref=e28]: Mas, na prática, a rotina vai sendo construída do jeito errado. A empresa começa a cobrar como se fosse empregado. Define horário. Cria subordinação. Passa ordens da forma errada. Mistura autonomia com controle. E quando percebe… o que estava "barato" vira risco.
+        - paragraph [ref=e29]: O problema é que, quando isso explode, normalmente já é tarde.
+        - paragraph [ref=e31]: E aí a empresa pode ter que lidar com reconhecimento de vínculo empregatício, passivo trabalhista, desgaste operacional, prejuízo financeiro e a sensação de que tudo poderia ter sido evitado.
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: O Perigo
+        - heading "O perigo não está só no contrato fraco" [level=2] [ref=e36]
+        - paragraph [ref=e37]: Está também na forma errada de conduzir a relação.
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - img [ref=e42]
+            - heading "Esse é o ponto que muitas empresas ignoram" [level=3] [ref=e44]
+          - paragraph [ref=e45]: Não basta ter um contrato assinado. É preciso que a contratação faça sentido no papel e na prática.
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - img [ref=e49]
+            - heading "Porque não adianta escrever uma coisa no documento…" [level=3] [ref=e52]
+          - paragraph [ref=e53]: E viver outra na rotina.
+        - generic [ref=e54]:
+          - img [ref=e56]
+          - paragraph [ref=e58]:
+            - text: É exatamente por isso que tantas empresas contratam PJ porque acham mais barato, acreditam que "todo mundo faz assim", formalizam sem estratégia, crescem rápido sem organizar processos e
+            - strong [ref=e59]: só vão buscar informação quando a dor já apareceu
+            - text: .
+      - paragraph [ref=e61]: Se você quer contratar prestador de serviços com mais inteligência, mais clareza e menos improviso, a sua empresa precisa de estrutura.
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]: A Solução
+        - heading "Foi por isso que eu criei o Modelo de Contrato de Prestação de Serviços Inteligente" [level=2] [ref=e66]
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - paragraph [ref=e69]: Um material prático para empresários e profissionais que precisam contratar PJ, MEI ou prestadores de serviços com mais segurança, sem depender de contrato genérico e sem ficar tomando decisões no escuro.
+          - paragraph [ref=e70]: Aqui, você não recebe apenas um arquivo solto.
+          - paragraph [ref=e71]: Você recebe uma estrutura pensada para te ajudar a formalizar a contratação com mais segurança, reduzir improvisos jurídicos e operacionais, entender melhor como conduzir essa relação, fazer ajustes contratuais quando necessário, encerrar a prestação de serviços com mais organização e diminuir o risco de erros que podem custar caro no futuro.
+          - link "Quero Contratar Com Mais Segurança" [ref=e72] [cursor=pointer]:
+            - /url: https://pay.hotmart.com/U97814646I?off=1bgzfy7c
+            - generic [ref=e73]: Quero Contratar Com Mais Segurança
+        - img "Mockup do Modelo de Contrato de Prestação de Serviços Inteligente" [ref=e76]
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e80]: Público
+        - heading "Esse material foi feito para quem leva contratação a sério" [level=2] [ref=e81]
+        - paragraph [ref=e82]: Se você se identifica com algum desses perfis, esse produto é exatamente o que a sua empresa precisa agora.
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - img [ref=e86]
+          - heading "Contrata ou pretende contratar PJ, MEI ou prestador de serviços" [level=3] [ref=e91]
+          - paragraph [ref=e92]: Você precisa formalizar essa relação com mais segurança desde o primeiro dia, sem depender de improvisos.
+        - generic [ref=e93]:
+          - img [ref=e95]
+          - heading "Quer evitar erros trabalhistas por falta de clareza na contratação" [level=3] [ref=e97]
+          - paragraph [ref=e98]: Sabe que um contrato mal feito hoje pode virar processo amanhã, e prefere prevenir do que remediar.
+        - generic [ref=e99]:
+          - img [ref=e101]
+          - heading "Não quer depender de modelo genérico da internet" [level=3] [ref=e103]
+          - paragraph [ref=e104]: Entende que contrato copiado do Google não protege empresa nenhuma. Precisa de algo estratégico e validado.
+        - generic [ref=e105]:
+          - img [ref=e107]
+          - heading "Precisa de um contrato mais estratégico e profissional" [level=3] [ref=e110]
+          - paragraph [ref=e111]: Sua empresa cresceu e a formalização precisa acompanhar esse nível. Chega de amadorismo jurídico.
+        - generic [ref=e112]:
+          - img [ref=e114]
+          - heading "Quer conduzir essa relação sem aumentar riscos para a empresa" [level=3] [ref=e117]
+          - paragraph [ref=e118]: Sabe que contratar é só o começo. O que importa é como a relação é conduzida no dia a dia.
+        - generic [ref=e119]:
+          - img [ref=e121]
+          - heading "Já teve problema trabalhista ou quer evitar passar por isso" [level=3] [ref=e123]
+          - paragraph [ref=e124]: Aprendeu na prática que prevenção é muito mais barata que processo. Agora quer fazer diferente.
+      - generic [ref=e127]:
+        - heading "✓ Se você se identificou com algum desses perfis" [level=3] [ref=e128]
+        - paragraph [ref=e129]: Esse material foi pensado exatamente para a realidade da sua empresa. Não é teoria. É prática estruturada para quem quer contratar com mais inteligência e menos risco.
+        - link "Quero Contratar Com Mais Segurança" [ref=e130] [cursor=pointer]:
+          - /url: https://pay.hotmart.com/U97814646I?off=1bgzfy7c
+          - generic [ref=e131]: Quero Contratar Com Mais Segurança
+    - generic [ref=e133]:
+      - generic [ref=e134]:
+        - generic [ref=e135]: O Conteúdo
+        - heading "O que você recebe" [level=2] [ref=e136]
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - generic [ref=e140]:
+            - img "Modelo de contrato de prestação de serviços" [ref=e141]
+            - generic [ref=e142]: Item 01
+          - generic [ref=e143]:
+            - heading "Modelo de Contrato de Prestação de Serviços pronto e editável" [level=3] [ref=e144]
+            - paragraph [ref=e145]: Com cláusulas essenciais e estratégicas para esse tipo de contratação, como obrigações das partes, precificação, sigilo, inexistência de vínculo empregatício, descontos por danos causados pelo MEI e outras cláusulas importantes para formalizar a relação com muito mais segurança.
+        - generic [ref=e146]:
+          - generic [ref=e148]:
+            - img "Termo aditivo contratual" [ref=e149]
+            - generic [ref=e150]: Item 02
+          - generic [ref=e151]:
+            - heading "Modelo de Termo Aditivo" [level=3] [ref=e152]
+            - paragraph [ref=e153]: Para alterar contratos que já estão ativos de forma mais segura e organizada, sem precisar improvisar sempre que a relação mudar.
+        - generic [ref=e154]:
+          - generic [ref=e156]:
+            - img "Modelo de distrato contratual" [ref=e157]
+            - generic [ref=e158]: Item 03
+          - generic [ref=e159]:
+            - heading "Modelo de Distrato" [level=3] [ref=e160]
+            - paragraph [ref=e161]: Para encerrar a prestação de serviços com mais clareza, registro e segurança documental.
+        - generic [ref=e162]:
+          - generic [ref=e164]:
+            - img "Termo para contratação de freelancer" [ref=e165]
+            - generic [ref=e166]: Item 04
+          - generic [ref=e167]:
+            - heading "Modelo de Termo Freelancer" [level=3] [ref=e168]
+            - paragraph [ref=e169]: Para assinar com profissionais autônomos que não comparecem de forma contínua na empresa, ajudando a formalizar esse tipo de relação com mais coerência.
+        - generic [ref=e170]:
+          - generic [ref=e172]:
+            - img "Modelo de recibo de pagamento" [ref=e173]
+            - generic [ref=e174]: Item 05
+          - generic [ref=e175]:
+            - heading "Recibo para pagamento do prestador freelancer" [level=3] [ref=e176]
+            - paragraph [ref=e177]: Um documento complementar para organizar pagamentos e registrar melhor essa contratação.
+        - generic [ref=e178]:
+          - generic [ref=e180]:
+            - img "Tutorial em vídeo do material" [ref=e181]
+            - generic [ref=e182]: Item 06
+          - generic [ref=e183]:
+            - heading "Tutorial em vídeo" [level=3] [ref=e184]
+            - paragraph [ref=e185]: Mostrando o passo a passo para preencher os modelos com mais segurança e usar o material da forma correta.
+    - generic [ref=e187]:
+      - generic [ref=e188]:
+        - generic [ref=e189]: Bônus Exclusivos
+        - heading "Além dos modelos, você ainda recebe:" [level=2] [ref=e190]
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - heading "Masterclass" [level=3] [ref=e193]
+          - paragraph [ref=e194]: Como contratar o prestador de serviços do zero sem gerar vínculo empregatício.
+        - generic [ref=e195]:
+          - heading "Aula sobre Condução Segura" [level=3] [ref=e196]
+          - paragraph [ref=e197]: Como conduzir a relação sem aumentar riscos para a empresa.
+        - generic [ref=e198]:
+          - heading "Encontros Mensais no Zoom" [level=3] [ref=e199]
+          - paragraph [ref=e200]: Com a Michelle para tirar dúvidas e ter direcionamento sobre situações práticas.
+        - generic [ref=e201]:
+          - heading "Grupo no WhatsApp" [level=3] [ref=e202]
+          - paragraph [ref=e203]: Para receber atualizações sobre a área trabalhista e se manter mais informado sobre temas que impactam a empresa.
+    - generic [ref=e205]:
+      - generic [ref=e206]:
+        - generic [ref=e207]: Na Prática
+        - heading "O que esse produto resolve?" [level=2] [ref=e208]
+      - generic [ref=e209]:
+        - paragraph [ref=e210]: Ele evita que você tenha que começar do zero toda vez que precisar contratar um prestador.
+        - paragraph [ref=e211]: Evita que a sua empresa fique refém de contrato fraco, genérico ou mal adaptado.
+        - paragraph [ref=e212]: Evita que decisões importantes sejam tomadas na pressa, no achismo ou apenas com base no "depois a gente vê".
+        - paragraph [ref=e213]: E te dá uma base mais sólida para contratar melhor, documentar melhor, ajustar melhor, encerrar melhor e conduzir melhor a prestação de serviços.
+        - paragraph [ref=e215]:
+          - text: "Em outras palavras: você deixa de improvisar uma contratação sensível e passa a tratar isso com a"
+          - strong [ref=e216]: seriedade que uma empresa madura precisa ter
+          - text: .
+    - generic [ref=e218]:
+      - generic [ref=e219]:
+        - generic [ref=e220]: Transformação
+        - heading "O que muda para a sua empresa depois disso?" [level=2] [ref=e221]
+      - generic [ref=e222]:
+        - generic [ref=e223]:
+          - img [ref=e225]
+          - heading "Mais Clareza" [level=3] [ref=e227]
+          - paragraph [ref=e228]: Na contratação
+        - generic [ref=e229]:
+          - img [ref=e231]
+          - heading "Mais Segurança" [level=3] [ref=e233]
+          - paragraph [ref=e234]: Na formalização
+        - generic [ref=e235]:
+          - img [ref=e237]
+          - heading "Mais Organização" [level=3] [ref=e240]
+          - paragraph [ref=e241]: Na documentação
+        - generic [ref=e242]:
+          - img [ref=e244]
+          - heading "Mais Consciência" [level=3] [ref=e247]
+          - paragraph [ref=e248]: Sobre o que pode ou não pode fazer na prática
+        - generic [ref=e249]:
+          - img [ref=e251]
+          - heading "Mais Preparo" [level=3] [ref=e254]
+          - paragraph [ref=e255]: Para crescer sem transformar contratação em bomba-relógio
+        - generic [ref=e256]:
+          - img [ref=e258]
+          - heading "O Principal" [level=3] [ref=e260]
+          - paragraph [ref=e261]: Você para de agir no automático em uma área que pode custar caro quando é tratada com amadorismo.
+    - generic [ref=e264]:
+      - heading "Empresa séria não improvisa contratação." [level=2] [ref=e265]
+      - paragraph [ref=e266]:
+        - text: Ela entende que
+        - strong [ref=e267]: prevenção é inteligência
+        - text: .
+      - paragraph [ref=e268]:
+        - text: Ela sabe que
+        - strong [ref=e269]: segurança jurídica não é excesso de cuidado
+        - text: . É base para crescer com mais estabilidade.
+      - paragraph [ref=e270]: Ela entende que a forma como contrata impacta diretamente seus riscos, sua organização, sua liderança, sua operação e o futuro do negócio.
+      - paragraph [ref=e271]: Se a sua empresa quer crescer de forma mais sólida, ela precisa parar de tratar contratação como detalhe.
+      - paragraph [ref=e273]: Porque contratação não é detalhe. É fundamento.
+      - link "Quero Ter Mais Segurança na Contratação" [ref=e274] [cursor=pointer]:
+        - /url: https://pay.hotmart.com/U97814646I?off=1bgzfy7c
+        - generic [ref=e275]: Quero Ter Mais Segurança na Contratação
+    - generic [ref=e277]:
+      - generic [ref=e278]:
+        - generic [ref=e279]: Para Quem
+        - heading "Para quem esse material foi pensado?" [level=2] [ref=e280]
+      - generic [ref=e281]:
+        - img [ref=e283]
+        - generic [ref=e288]:
+          - generic [ref=e289]: Público Principal
+          - heading "Empresários de pequenas e médias empresas" [level=3] [ref=e290]
+          - paragraph [ref=e291]: Que contratam ou querem contratar prestadores de serviços (PJ, MEI ou freelancer) com mais segurança, sem depender de improvisos jurídicos.
+      - generic [ref=e293]: E também funciona como apoio para
+      - generic [ref=e294]:
+        - generic [ref=e295]:
+          - img [ref=e297]
+          - heading "Gestores" [level=4] [ref=e300]
+          - paragraph [ref=e301]: Que precisam conduzir contratações com mais clareza e segurança jurídica.
+        - generic [ref=e302]:
+          - img [ref=e304]
+          - heading "Profissionais de RH" [level=4] [ref=e307]
+          - paragraph [ref=e308]: Que cuidam das contratações e precisam de base sólida para formalizar relações.
+        - generic [ref=e309]:
+          - img [ref=e311]
+          - heading "Profissionais de DP" [level=4] [ref=e314]
+          - paragraph [ref=e315]: Que lidam com documentação e precisam de modelos confiáveis e validados.
+        - generic [ref=e316]:
+          - img [ref=e318]
+          - heading "Advogados" [level=4] [ref=e321]
+          - paragraph [ref=e322]: Que desejam uma base prática e estruturada para orientar seus clientes.
+      - paragraph [ref=e324]: Que desejam uma base prática e estruturada para esse tipo de contratação.
+    - generic [ref=e327]:
+      - generic:
+        - generic:
+          - img "Michelle Coelho, especialista em Consultoria Empresarial Trabalhista"
+      - generic [ref=e328]:
+        - generic [ref=e329]: A Especialista
+        - heading "Sobre a Michelle" [level=2] [ref=e330]
+        - paragraph [ref=e331]:
+          - text: Michelle é especialista em
+          - strong [ref=e332]: Consultoria Empresarial Trabalhista
+          - text: e, desde
+          - strong [ref=e333]: "2015"
+          - text: ", ajuda empresas a estruturarem suas relações de trabalho com mais clareza, segurança e inteligência. Ao longo da sua trajetória, já impactou"
+          - strong [ref=e334]: mais de 21 mil empresas
+          - text: por meio dos seus produtos, orientando empresários que desejam crescer com mais organização, proteção e visão estratégica.
+        - paragraph [ref=e335]:
+          - text: "Sua atuação parte de uma convicção forte:"
+          - strong [ref=e336]: empresas sólidas não são construídas no improviso
+          - text: . São construídas com regras claras, liderança, estrutura e decisões inteligentes. Por isso, Michelle defende que a área trabalhista não deve ser vista apenas como burocracia ou medo, mas como uma ferramenta estratégica para proteger a empresa, organizar a operação e sustentar o crescimento.
+        - paragraph [ref=e337]: "Ao acompanhar de perto a rotina de empresários, Michelle percebeu que muitas empresas não perdem apenas dinheiro com processos. Perdem também autoridade, paz e força de operação por erros evitáveis, contratações mal feitas, falta de clareza e uma gestão baseada no achismo. É por isso que seu trabalho vai além de explicar leis: ele existe para ajudar empresas a amadurecerem a forma como contratam, lideram e estruturam suas equipes."
+        - paragraph [ref=e339]: "\"Empresa séria não improvisa contratação. Prevenção é inteligência e segurança jurídica e visão estratégica caminham juntas.\""
+    - generic [ref=e341]:
+      - generic [ref=e342]:
+        - generic [ref=e343]: Resultados
+        - heading "Quem aplica com clareza, sente a diferença na prática" [level=2] [ref=e344]
+      - generic [ref=e345]:
+        - generic [ref=e346]:
+          - img "Depoimento CPS 01"
+        - generic [ref=e347]:
+          - img "Depoimento CPS 02"
+        - generic [ref=e348]:
+          - img "Depoimento CPS 03"
+        - generic [ref=e349]:
+          - img "Depoimento CPS 04"
+        - generic [ref=e350]:
+          - img "Depoimento CPS 05"
+        - generic [ref=e351]:
+          - img "Depoimento CPS 06"
+    - generic [ref=e353]:
+      - generic [ref=e354]:
+        - generic [ref=e355]: Valor
+        - heading "Quanto custaria resolver isso do zero?" [level=2] [ref=e356]
+      - generic [ref=e357]:
+        - paragraph [ref=e358]: Se você fosse buscar isso sozinho, provavelmente teria que procurar um modelo confiável, adaptar cláusulas sem saber se estão corretas, descobrir sozinho como alterar ou encerrar a relação, entender na marra como conduzir a contratação na prática e ainda correr o risco de formalizar errado.
+        - paragraph [ref=e360]:
+          - text: Sem contar o
+          - strong [ref=e361]: custo invisível da insegurança
+          - text: ": tempo perdido, retrabalho, dúvidas, decisões mal tomadas e exposição desnecessária."
+        - paragraph [ref=e362]: Mas para facilitar o acesso a esse material, hoje você pode entrar por uma condição muito menor do que o valor que esse tipo de erro pode custar para a empresa.
+    - generic [ref=e364]:
+      - generic [ref=e365]:
+        - generic [ref=e366]: Oferta Especial
+        - heading "Hoje, você recebe:" [level=2] [ref=e367]
+      - generic [ref=e368]:
+        - generic [ref=e369]:
+          - generic [ref=e370]: "01"
+          - generic [ref=e371]: Modelo de Contrato de Prestação de Serviços Inteligente
+        - generic [ref=e372]:
+          - generic [ref=e373]: "02"
+          - generic [ref=e374]: Modelo de Termo Aditivo
+        - generic [ref=e375]:
+          - generic [ref=e376]: "03"
+          - generic [ref=e377]: Modelo de Distrato
+        - generic [ref=e378]:
+          - generic [ref=e379]: "04"
+          - generic [ref=e380]: Modelo de Termo Freelancer
+        - generic [ref=e381]:
+          - generic [ref=e382]: "05"
+          - generic [ref=e383]: Recibo para pagamento do freelancer
+        - generic [ref=e384]:
+          - generic [ref=e385]: "06"
+          - generic [ref=e386]: Tutorial em vídeo para preenchimento dos modelos
+      - generic [ref=e387]: "+ Bônus: masterclass, aula sobre condução segura, encontros mensais e grupo no WhatsApp"
+      - generic [ref=e388]:
+        - generic [ref=e389]: OFERTA ESPECIAL DE LANÇAMENTO
+        - img "O que você recebe"
+        - heading "Pronto para estruturar sua empresa com segurança?" [level=3] [ref=e390]:
+          - text: Pronto para estruturar sua
+          - text: empresa com segurança?
+        - generic [ref=e391]: De R$ 297,00
+        - generic [ref=e392]: ECONOMIA DE 67%
+        - generic [ref=e393]: R$ 97,00
+        - paragraph [ref=e394]:
+          - text: ou
+          - strong [ref=e395]: 12x de R$ 10,03
+          - text: no cartão
+        - link "Garantir o meu acesso agora →" [ref=e396] [cursor=pointer]:
+          - /url: https://pay.hotmart.com/U97814646I?off=1bgzfy7c
+          - generic [ref=e397]: Garantir o meu acesso agora →
+        - generic [ref=e398]:
+          - generic [ref=e399]:
+            - img [ref=e400]
+            - text: Pagamento seguro
+          - generic [ref=e403]: "|"
+          - generic [ref=e404]: Acesso imediato
+          - generic [ref=e405]: "|"
+          - generic [ref=e406]: Garantia de 7 dias
+    - generic [ref=e409]:
+      - img "Selo de garantia de 7 dias" [ref=e411]
+      - generic [ref=e412]:
+        - heading "Garantia incondicional de 7 dias" [level=3] [ref=e413]
+        - paragraph [ref=e414]:
+          - text: Ao entrar, você pode acessar o material, conhecer os documentos e entender a estrutura do produto. Se dentro de 7 dias você perceber que ele não é para você, basta solicitar o reembolso dentro do prazo de garantia.
+          - strong [ref=e415]: Sem complicação. Você entra com muito mais tranquilidade para conhecer o conteúdo por dentro.
+    - generic [ref=e417]:
+      - generic [ref=e418]:
+        - generic [ref=e419]: Dúvidas
+        - heading "Perguntas frequentes" [level=2] [ref=e420]
+      - generic [ref=e421]:
+        - group [ref=e422]:
+          - generic "Esse material serve apenas para empresários?" [ref=e423] [cursor=pointer]: Esse material serve apenas para empresários?
+        - group [ref=e425]:
+          - generic "O produto entrega só o contrato?" [ref=e426] [cursor=pointer]: O produto entrega só o contrato?
+        - group [ref=e428]:
+          - generic "Esse material garante que nunca haverá processo?" [ref=e429] [cursor=pointer]: Esse material garante que nunca haverá processo?
+        - group [ref=e431]:
+          - generic "O acesso é por quanto tempo?" [ref=e432] [cursor=pointer]: O acesso é por quanto tempo?
+        - group [ref=e434]:
+          - generic "Vou receber atualizações?" [ref=e435] [cursor=pointer]: Vou receber atualizações?
+        - group [ref=e437]:
+          - generic "Posso parcelar?" [ref=e438] [cursor=pointer]: Posso parcelar?
+        - group [ref=e440]:
+          - generic "Tenho suporte para tirar dúvidas?" [ref=e441] [cursor=pointer]: Tenho suporte para tirar dúvidas?
+    - generic [ref=e445]:
+      - heading "A decisão é simples:" [level=2] [ref=e446]
+      - paragraph [ref=e447]: Você pode continuar contratando no improviso, torcendo para que esteja tudo certo.
+      - paragraph [ref=e448]: Ou pode estruturar essa contratação com mais clareza, mais segurança e muito mais inteligência.
+      - paragraph [ref=e449]: Se a sua empresa quer crescer com mais maturidade, precisa começar a tratar contratação como fundamento, não como detalhe.
+      - link "Quero Contratar PJ e MEI Com Mais Segurança" [ref=e450] [cursor=pointer]:
+        - /url: "#oferta"
+        - generic [ref=e451]: Quero Contratar PJ e MEI Com Mais Segurança
+    - generic [ref=e453]:
+      - generic:
+        - img "Logo Michelle Coelho"
+      - paragraph [ref=e454]: © 2026 Modelo de Contrato de Prestação de Serviços Inteligente. Todos os direitos reservados.
+      - paragraph [ref=e455]:
+        - text: Michelle Coelho - Consultoria Empresarial Trabalhista | CNPJ 42.735.832/0001-04 |
+        - link "michelle@michellecoelho.com.br" [ref=e456] [cursor=pointer]:
+          - /url: mailto:michelle@michellecoelho.com.br
+    - link "Fale no WhatsApp - Olá! Vim pelo produto Modelo de Contrato de Prestação de Serviços Inteligente e preciso de suporte. Pode me ajudar?" [ref=e457] [cursor=pointer]:
+      - /url: https://wa.me/5511921450444?text=Ol%C3%A1%21%20Vim%20pelo%20produto%20Modelo%20de%20Contrato%20de%20Presta%C3%A7%C3%A3o%20de%20Servi%C3%A7os%20Inteligente%20e%20preciso%20de%20suporte.%20Pode%20me%20ajudar%3F
+      - img [ref=e458]
