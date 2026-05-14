@@ -692,7 +692,7 @@
 
     .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, 660px) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 580px) minmax(0, 1fr);
       align-items: center;
       column-gap: 64px;
     }
@@ -700,8 +700,8 @@
     .hero-content {
       position: relative;
       z-index: 3;
-      width: min(100%, 660px);
-      max-width: 660px;
+      width: min(100%, 580px);
+      max-width: 580px;
       text-align: left;
       text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
     }
@@ -720,8 +720,8 @@
     .hero h1 {
       max-width: 100%;
       margin: 0 0 18px;
-      font-size: clamp(2.65rem, 3.35vw, 3.1rem);
-      line-height: 1.12;
+      font-size: clamp(2.2rem, 2.85vw, 2.65rem);
+      line-height: 1.15;
       letter-spacing: 0;
     }
 
@@ -789,15 +789,15 @@
         max-width: 1320px;
       }
       .hero-inner {
-        grid-template-columns: minmax(0, 710px) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
         column-gap: 80px;
       }
       .hero-content {
-        width: min(100%, 710px);
-        max-width: 710px;
+        width: min(100%, 640px);
+        max-width: 640px;
       }
       .hero h1 {
-        font-size: 3.1rem;
+        font-size: 2.85rem;
       }
       .hero .lead {
         font-size: 1.125rem;
@@ -827,33 +827,33 @@
         max-width: 1120px;
       }
       .hero-inner {
-        grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 500px) minmax(0, 1fr);
         column-gap: 48px;
       }
       .hero-content {
-        width: min(100%, 560px);
-        max-width: 560px;
+        width: min(100%, 500px);
+        max-width: 500px;
       }
       .hero h1 {
-        font-size: 2.65rem;
+        font-size: 2.35rem;
       }
       .hero .lead {
-        font-size: 1.0625rem;
+        font-size: 1rem;
       }
     }
 
     @media (max-width: 1180px) {
       .hero-inner {
-        grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
       }
 
       .hero-content {
-        width: min(100%, 440px);
-        max-width: 440px;
+        width: min(100%, 420px);
+        max-width: 420px;
       }
 
       .hero h1 {
-        font-size: 2.35rem;
+        font-size: 2.1rem;
       }
     }
 
@@ -917,7 +917,7 @@
         background-repeat: no-repeat;
         align-items: flex-start;
         min-height: 0;
-        padding: clamp(430px, 54svh, 560px) 0 40px;
+        padding: clamp(340px, 44svh, 440px) 0 40px;
       }
 
       .hero .container {
@@ -992,46 +992,13 @@
       }
 
       .hero .hero-trust {
-        width: 100%;
-        max-width: 620px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 14px auto 0;
-        gap: 0.4rem 0.5rem;
-        font-size: clamp(0.68rem, 1.75vw, 0.76rem);
-        line-height: 1.25;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.84);
-      }
-
-      .hero .hero-trust span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.32rem;
-        padding: 0.22rem 0.48rem;
-        border-radius: 999px;
-        border: 1px solid rgba(219, 184, 74, 0.26);
-        background: rgba(255, 255, 255, 0.04);
-        white-space: nowrap;
-      }
-
-      .hero .hero-trust span::before {
-        width: 4px;
-        height: 4px;
-      }
-
-      .hero .hero-trust span:last-child {
-        grid-column: auto;
-        justify-self: center;
+        display: none;
       }
     }
 
     @media (max-width: 640px) {
       .hero {
-        padding-top: clamp(400px, 53svh, 520px);
+        padding-top: clamp(320px, 42svh, 420px);
       }
 
       .hero-content {
@@ -1056,7 +1023,7 @@
     /* Mobile pequeno */
     @media (max-width: 480px) {
       .hero {
-        padding-top: clamp(390px, 52svh, 500px);
+        padding-top: clamp(310px, 42svh, 400px);
       }
 
       .hero-content {
@@ -1092,7 +1059,7 @@
 
     @media (max-width: 380px) {
       .hero {
-        padding-top: clamp(360px, 50svh, 460px);
+        padding-top: clamp(280px, 40svh, 360px);
       }
 
       .hero-content,
@@ -1932,6 +1899,18 @@
       display: block;
     }
 
+    @media (max-width: 767px) {
+      .testimonial {
+        min-height: auto;
+        border-radius: var(--radius-sm);
+      }
+
+      .testimonial img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
     /* Quote */
     .quote {
       margin-top: 1.25rem;
@@ -2217,15 +2196,32 @@
       
       .feature-row {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         padding: 1.25rem;
         gap: 1rem;
       }
       
       .icon-card-header {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         gap: 0.75rem;
+      }
+
+      /* Mobile: alinhar textos de conteúdo à esquerda para consistência */
+      .section .grid > .reveal,
+      .section .grid > div,
+      .section .grid > .card,
+      #solucao .grid > .reveal,
+      #problema .reveal,
+      #dor .grid > .card,
+      #dor .reveal,
+      #bonus .grid > .card,
+      #sobre .grid > .reveal,
+      #para-quem .para-quem-card,
+      .icon-card,
+      .item-card,
+      .quote {
+        text-align: left;
       }
 
       .section {
@@ -3292,7 +3288,7 @@
           gap: 1.25rem;
           max-width: 1000px;
           margin: 0 auto 2rem;
-          overflow-x: hidden;
+          overflow: visible;
         }
 
         #publico .publico-card {
@@ -3471,10 +3467,12 @@
           #publico .publico-grid {
             grid-template-columns: 1fr;
             gap: 0.875rem;
+            overflow: visible;
           }
 
           #publico .publico-card {
             padding: 1.125rem;
+            overflow: visible;
           }
 
           #publico .publico-footer {
@@ -3521,11 +3519,13 @@
 
           #publico .publico-grid {
             gap: 0.75rem;
+            overflow: visible;
           }
 
           #publico .publico-card {
             padding: 1rem;
             border-radius: var(--radius-sm);
+            overflow: visible;
           }
 
           #publico .publico-icon {
