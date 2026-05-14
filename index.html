@@ -508,7 +508,13 @@
     /* Gold text */
     .gold-text {
       color: var(--gold-light);
-      font-weight: 500;
+      font-weight: 600;
+    }
+
+    .hero h1 .gold-text {
+      color: #f1d274;
+      font-weight: 700;
+      text-shadow: 0 0 20px rgba(241, 210, 116, 0.28);
     }
 
     /* Buttons */
@@ -889,15 +895,15 @@
       }
 
       .hero-content {
-        width: min(100%, 330px);
-        max-width: 330px;
+        width: 100%;
+        max-width: 100%;
         margin-inline: auto;
         text-align: center;
       }
 
       .hero-content .overline {
         width: fit-content;
-        max-width: min(100%, 320px);
+        max-width: 100%;
         justify-content: center;
         margin: 0 auto 12px;
         padding: 6px 10px;
@@ -907,45 +913,63 @@
       }
 
       .hero h1 {
-        width: min(100%, 330px);
-        max-width: 330px;
+        width: 100%;
+        max-width: 100%;
         margin: 0 auto 14px;
-        font-size: 1.42rem;
-        line-height: 1.15;
+        font-size: 1.56rem;
+        line-height: 1.12;
+        letter-spacing: -0.012em;
         overflow-wrap: break-word;
+        text-wrap: balance;
       }
 
       .hero .lead {
-        width: min(100%, 320px);
-        max-width: 320px;
+        width: 100%;
+        max-width: 100%;
         margin-inline: auto;
-        font-size: 0.84rem;
-        line-height: 1.42;
+        font-size: 0.9rem;
+        line-height: 1.46;
         color: rgba(255, 255, 255, 0.9);
       }
 
       .hero-actions {
         margin: 20px auto 0;
-        width: min(100%, 320px);
-        max-width: 320px;
+        width: 100%;
+        max-width: 100%;
       }
 
       .hero-actions .btn {
         max-width: 100%;
-        min-height: 48px;
-        padding: 0.75rem 1rem;
-        font-size: 0.68rem;
+        min-height: 52px;
+        padding: 0.78rem 1rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
       }
 
       .hero .hero-trust {
-        width: min(100%, 320px);
-        max-width: 320px;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         margin: 16px auto 0;
-        gap: 6px 12px;
-        font-size: 0.68rem;
-        line-height: 1.35;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
         text-align: center;
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      .hero .hero-trust span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.3rem 0.72rem;
+        border-radius: 999px;
+        border: 1px solid rgba(219, 184, 74, 0.26);
+        background: rgba(255, 255, 255, 0.04);
       }
     }
 
@@ -955,21 +979,21 @@
       }
 
       .hero-content {
-        width: min(100%, 315px);
-        max-width: 315px;
+        width: 100%;
+        max-width: 100%;
       }
 
       .hero h1 {
-        width: min(100%, 315px);
-        max-width: 315px;
-        font-size: 1.34rem;
+        width: 100%;
+        max-width: 100%;
+        font-size: 1.46rem;
       }
 
       .hero .lead,
       .hero-actions,
       .hero-trust {
-        width: min(100%, 305px);
-        max-width: 305px;
+        width: 100%;
+        max-width: 100%;
       }
     }
 
@@ -980,33 +1004,33 @@
       }
 
       .hero-content {
-        width: min(100%, 305px);
-        max-width: 305px;
+        width: 100%;
+        max-width: 100%;
       }
 
       .hero-content .overline {
-        max-width: min(100%, 305px);
+        max-width: 100%;
         margin-bottom: 14px;
         font-size: 0.52rem;
       }
 
       .hero h1 {
-        width: min(100%, 305px);
-        max-width: 305px;
-        font-size: 1.26rem;
+        width: 100%;
+        max-width: 100%;
+        font-size: 1.34rem;
         line-height: 1.15;
       }
 
       .hero .lead {
-        width: min(100%, 305px);
-        max-width: 305px;
-        font-size: 0.78rem;
+        width: 100%;
+        max-width: 100%;
+        font-size: 0.86rem;
       }
 
       .hero-actions,
       .hero-trust {
-        width: min(100%, 305px);
-        max-width: 305px;
+        width: 100%;
+        max-width: 100%;
       }
     }
 
@@ -1020,12 +1044,12 @@
       .hero .lead,
       .hero-actions,
       .hero-trust {
-        width: min(100%, 288px);
-        max-width: 288px;
+        width: 100%;
+        max-width: 100%;
       }
 
       .hero h1 {
-        font-size: 1.16rem;
+        font-size: 1.22rem;
       }
     }
 
@@ -1810,13 +1834,10 @@
     /* Testimonial */
     .testimonial {
       background: rgba(255, 255, 255, 0.015);
-      border: 1px dashed var(--border);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: var(--radius);
       min-height: 200px;
-      display: grid;
-      place-items: center;
-      padding: 1.5rem;
-      text-align: center;
+      overflow: hidden;
       transition: all var(--transition);
     }
 
@@ -1825,10 +1846,10 @@
       background: rgba(255, 255, 255, 0.03);
     }
 
-    .testimonial p {
-      font-size: 0.8125rem;
-      color: var(--text-muted);
-      margin: 0;
+    .testimonial img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     /* Quote */
@@ -2223,7 +2244,7 @@
     "priceCurrency": "BRL",
     "price": "97",
     "availability": "https://schema.org/InStock",
-    "url": "https://pay.hotmart.com/Y97284855G?checkoutMode=10"
+    "url": "https://pay.hotmart.com/U97814646I?off=1bgzfy7c"
   }
 }
 </script>
@@ -2241,9 +2262,9 @@
             <p class="overline">Modelo de Contrato de Prestação de Serviços</p>
 
             <h1 id="hero-title">
-              Contrate PJ ou MEI com mais segurança,
+              Contrate PJ ou MEI com mais <span class="gold-text">segurança</span>,
               <span class="gold-text">sem improviso</span>
-              e protegendo a empresa de problemas na Justiça do Trabalho
+              e <span class="gold-text">protegendo a empresa</span> de problemas na Justiça do Trabalho
             </h1>
 
             <p class="lead">
@@ -2253,7 +2274,7 @@
             </p>
 
             <div class="hero-actions">
-              <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank"
+              <a href="https://pay.hotmart.com/U97814646I?off=1bgzfy7c" class="btn" target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Quero acessar o Modelo de Contrato de Prestação de Serviços Inteligente">
                 <span class="btn-text">Quero acessar o modelo agora</span>
@@ -2381,7 +2402,7 @@
               quando necessário, encerrar a prestação de serviços com mais organização e diminuir o risco de erros que
               podem custar caro no futuro.
             </p>
-            <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Contratar Com Mais Segurança</span></a>
+            <a href="https://pay.hotmart.com/U97814646I?off=1bgzfy7c" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Contratar Com Mais Segurança</span></a>
           </div>
 
           <div class="reveal" style="height: 100%;">
@@ -2812,7 +2833,7 @@
         <div class="para-quem-cta reveal">
           <h3><span style="color: #7a6030;">&#10003;</span> Se você se identificou com algum desses perfis</h3>
           <p>Esse material foi pensado exatamente para a realidade da sua empresa. Não é teoria. É prática estruturada para quem quer contratar com mais inteligência e menos risco.</p>
-          <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Contratar Com Mais Segurança</span></a>
+          <a href="https://pay.hotmart.com/U97814646I?off=1bgzfy7c" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Contratar Com Mais Segurança</span></a>
         </div>
       </div>
     </section>
@@ -3070,7 +3091,7 @@
             </p>
           </div>
 
-          <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn reveal" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Ter Mais Segurança na Contratação</span></a>
+          <a href="https://pay.hotmart.com/U97814646I?off=1bgzfy7c" class="btn reveal" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Ter Mais Segurança na Contratação</span></a>
         </div>
       </div>
     </section>
@@ -3597,13 +3618,22 @@
 
         <div class="grid grid-3">
           <div class="testimonial reveal">
-            <p>INSERIR DEPOIMENTO / PRINT / CASO REAL</p>
+            <img src="Imagens/01 Depoimento CPS.png" alt="Depoimento CPS 01" loading="lazy" decoding="async">
           </div>
           <div class="testimonial reveal">
-            <p>INSERIR DEPOIMENTO / PRINT / CASO REAL</p>
+            <img src="Imagens/02 Depoimento CPS.png" alt="Depoimento CPS 02" loading="lazy" decoding="async">
           </div>
           <div class="testimonial reveal">
-            <p>INSERIR DEPOIMENTO / PRINT / CASO REAL</p>
+            <img src="Imagens/03 Depoimento CPS.png" alt="Depoimento CPS 03" loading="lazy" decoding="async">
+          </div>
+          <div class="testimonial reveal">
+            <img src="Imagens/04 Depoimento CPS.png" alt="Depoimento CPS 04" loading="lazy" decoding="async">
+          </div>
+          <div class="testimonial reveal">
+            <img src="Imagens/05 Depoimento CPS.png" alt="Depoimento CPS 05" loading="lazy" decoding="async">
+          </div>
+          <div class="testimonial reveal">
+            <img src="Imagens/06 Depoimento CPS.png" alt="Depoimento CPS 06" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -3691,7 +3721,7 @@
           <div class="price-current" style="font-size: clamp(3.5rem, 8vw, 5rem); margin-bottom: 0.5rem; color: var(--gold-light);">R$ 97,00</div>
           <p class="price-installments" style="margin-bottom: 2.5rem; font-size: 1rem;">ou <strong>12x de R$ 10,03</strong> no cartão</p>
 
-          <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer" style="width: 100%; max-width: 420px; margin: 0 auto; min-height: 64px; display: flex;"><span class="btn-text" style="font-size: 0.9375rem; letter-spacing: 0; text-transform: uppercase;">Garantir o meu acesso agora &rarr;</span></a>
+          <a href="https://pay.hotmart.com/U97814646I?off=1bgzfy7c" class="btn" target="_blank" rel="noopener noreferrer" style="width: 100%; max-width: 420px; margin: 0 auto; min-height: 64px; display: flex;"><span class="btn-text" style="font-size: 0.9375rem; letter-spacing: 0; text-transform: uppercase;">Garantir o meu acesso agora &rarr;</span></a>
 
           <div class="price-features" style="margin-top: 1.5rem; opacity: 0.7; gap: 0.75rem; font-size: 0.8125rem; justify-content: center;">
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Pagamento seguro</span>
@@ -3805,7 +3835,7 @@
     <!-- STICKY CTA -->
     <div class="sticky-cta" id="stickyCta">
       <div class="container">
-        <a href="https://pay.hotmart.com/Y97284855G?checkoutMode=10" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Acessar Agora</span></a>
+        <a href="https://pay.hotmart.com/U97814646I?off=1bgzfy7c" class="btn" target="_blank" rel="noopener noreferrer"><span class="btn-text">Quero Acessar Agora</span></a>
       </div>
     </div>
 
@@ -3866,3 +3896,4 @@
 </body>
 
 </html>
+
